@@ -144,7 +144,7 @@ export default function Index() {
     <div className="bg-[#06080d] text-[#f1f5f9] font-sans min-h-screen selection:bg-[#0da2e7] selection:text-white overflow-x-hidden">
       
       {/* ===================== HERO SECTION ===================== */}
-      <section className="relative min-h-[92vh] sm:min-h-screen bg-[#07090e] flex flex-col justify-between overflow-hidden px-4 sm:px-8 lg:px-14 pt-8 pb-10 border-b border-[#121824]">
+      <section className="relative min-h-[calc(100vh-5rem)] bg-[#07090e] flex flex-col justify-between overflow-hidden px-4 sm:px-8 lg:px-14 pt-20 sm:pt-24 pb-6 border-b border-[#121824]">
         
         {/* Top Header Row */}
         <div className="w-full flex items-center justify-between text-[11px] sm:text-xs tracking-widest uppercase font-semibold text-[#8b9bb4] z-30">
@@ -170,7 +170,7 @@ export default function Index() {
           </div>
 
           {/* Large Center Portrait */}
-          <div className="relative z-10 w-[300px] sm:w-[420px] md:w-[480px] lg:w-[580px] xl:w-[640px] pointer-events-none mt-6 sm:mt-2">
+          <div className="relative z-10 w-[300px] sm:w-[400px] md:w-[460px] lg:w-[530px] xl:w-[580px] pointer-events-none -mt-4 sm:-mt-8">
             <img
               src="/profil-icon.png"
               alt="Robin Syaifuddin"
@@ -181,7 +181,7 @@ export default function Index() {
           </div>
 
           {/* Left Hero Card: Hello, I'm ROBIN SYAIFUDDIN */}
-          <div className="absolute left-0 bottom-6 sm:bottom-12 z-20 max-w-[270px] sm:max-w-xs md:max-w-sm pointer-events-auto">
+          <div className="absolute left-0 bottom-2 sm:bottom-6 z-20 max-w-[270px] sm:max-w-xs md:max-w-sm pointer-events-auto">
             <p className="font-handwriting text-2xl sm:text-3xl text-white/90 italic mb-1 tracking-wide">
               Hello, I&apos;m
             </p>
@@ -204,7 +204,7 @@ export default function Index() {
           </div>
 
           {/* Right Hero Items: Sparkle quote + Vertical Stats */}
-          <div className="absolute right-0 top-12 sm:top-16 z-20 hidden md:flex items-center gap-2 max-w-[220px]">
+          <div className="absolute right-0 top-6 sm:top-8 z-20 hidden md:flex items-center gap-2 max-w-[220px]">
             <Sparkles size={16} className="text-[#0da2e7] shrink-0" />
             <p className="text-[11px] text-[#94a3b8] leading-tight">
               Turning ideas into powerful & scalable digital experiences.
@@ -212,7 +212,7 @@ export default function Index() {
           </div>
 
           {/* Right Stats Vertical Counter */}
-          <div className="absolute right-0 bottom-6 sm:bottom-12 z-20 space-y-6 text-right sm:text-left pointer-events-auto">
+          <div className="absolute right-0 bottom-2 sm:bottom-6 z-20 space-y-6 text-right sm:text-left pointer-events-auto">
             {STATS.map((stat) => (
               <div key={stat.label} className="group">
                 <p className="font-display text-3xl sm:text-4xl text-[#0da2e7] font-bold leading-none tracking-tight">
