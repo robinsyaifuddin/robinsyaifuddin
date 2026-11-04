@@ -28,3 +28,8 @@ dist-ssr
 Untitled-1.txt
 .vercel
 
+
+# Next.js
+.next/
+out/
+next-env.d.ts

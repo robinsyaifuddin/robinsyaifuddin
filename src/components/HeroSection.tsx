@@ -1,6 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Database, Smartphone, Globe, Briefcase, Mail, Brain, Cpu } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 const HeroSection = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -48,14 +50,14 @@ const HeroSection = () => {
           <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start transform transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
           transitionDelay: '0.6s'
         }}>
-            <Link to="/about" className="w-full sm:w-auto">
+            <Link href="/about" className="w-full sm:w-auto">
               <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-black font-semibold px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,102,0,0.6)] group">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:rotate-12 transition-transform" />
                 About Me
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link to="/portfolio" className="w-full sm:w-auto">
+            <Link href="/portfolio" className="w-full sm:w-auto">
               <Button variant="outline" size="lg" className="w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-black px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-xl transform hover:scale-105 transition-all duration-300 group">
                 <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:rotate-12 transition-transform" />
                 Portfolio

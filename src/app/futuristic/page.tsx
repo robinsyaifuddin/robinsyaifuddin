@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
@@ -36,9 +37,9 @@ const FuturisticPortfolio = () => {
   ];
 
   const projects = [
-    { title: "E-Commerce Platform", image: "/lovable-uploads/0b2e3fc5-f4eb-476f-a858-bda20d9e1e4c.png", category: "Web" },
-    { title: "AI Dashboard", image: "/lovable-uploads/55c66a71-0e35-40a1-a4d1-0ad1b2700206.png", category: "AI" },
-    { title: "Mobile Banking App", image: "/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png", category: "Mobile" }
+    { title: "E-Commerce Platform", image: "/hero-oldmoney-blazer.jpg", category: "Web" },
+    { title: "AI Dashboard", image: "/hero-oldmoney-founder.jpg", category: "AI" },
+    { title: "Mobile Banking App", image: "/profil-icon.png", category: "Mobile" }
   ];
 
   return (
@@ -138,7 +139,7 @@ const FuturisticPortfolio = () => {
                 {/* Profile Image with Glow */}
                 <div className="absolute inset-12 rounded-full overflow-hidden glow-image">
                   <img 
-                    src="/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png" 
+                    src="/profil-icon.png" 
                     alt="Robin Syaifuddin" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />

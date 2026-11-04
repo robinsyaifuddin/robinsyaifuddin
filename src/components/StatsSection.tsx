@@ -1,3 +1,4 @@
+"use client";
 
 import { CheckCircle, Eye } from "lucide-react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";

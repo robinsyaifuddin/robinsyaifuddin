@@ -1,18 +1,19 @@
+"use client";
+
+"use client";
 
 import { useEffect, useCallback, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 interface PageTransitionProps {
   children: React.ReactNode;
 }
 
 const PageTransition = ({ children }: PageTransitionProps) => {
-  const location = useLocation();
+  const pathname = usePathname();
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Optimasi scroll dengan useCallback
   const scrollToTop = useCallback(() => {
-    // Gunakan requestAnimationFrame untuk performa yang lebih baik
     requestAnimationFrame(() => {
       window.scrollTo({
         top: 0,
@@ -26,22 +27,14 @@ const PageTransition = ({ children }: PageTransitionProps) => {
     setIsLoaded(false);
     scrollToTop();
     
-    // Trigger animasi setelah komponen mount
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
     
-    // Preload gambar untuk halaman berikutnya (opsional)
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.href = '/lovable-uploads/0b2e3fc5-f4eb-476f-a858-bda20d9e1e4c.png';
-    document.head.appendChild(link);
-    
     return () => {
       clearTimeout(timer);
-      document.head.removeChild(link);
     };
-  }, [location.pathname, scrollToTop]);
+  }, [pathname, scrollToTop]);
 
   return (
     <div className="relative">

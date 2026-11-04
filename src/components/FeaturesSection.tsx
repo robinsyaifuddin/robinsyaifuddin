@@ -1,3 +1,4 @@
+"use client";
 
 import { BarChart3, Target, Shield } from "lucide-react";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";

@@ -1,5 +1,6 @@
+"use client";
 import { Mail, Phone, MapPin, Linkedin, Github, Globe, ArrowUp, Heart } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const scrollToTop = () => {
@@ -54,7 +55,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 rounded-xl overflow-hidden border-2 border-white/20 transform hover:scale-110 transition-all duration-300 glow-animation">
                 <img 
-                  src="/lovable-uploads/0b2e3fc5-f4eb-476f-a858-bda20d9e1e4c.png" 
+                  src="/favicon.png" 
                   alt="Robin Syaifuddin" 
                   className="w-full h-full object-cover" 
                 />
@@ -83,7 +84,7 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => <li key={index}>
-                    <Link to={link.href} className="text-gray-400 hover:text-primary transition-all duration-300 flex items-center group">
+                    <Link href={link.href} className="text-gray-400 hover:text-primary transition-all duration-300 flex items-center group">
                       <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-3"></div>
                       {link.name}
                     </Link>
@@ -114,7 +115,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => <li key={index}>
-                  <Link to={link.href} className="text-gray-400 hover:text-primary transition-all duration-300 flex items-center group">
+                  <Link href={link.href} className="text-gray-400 hover:text-primary transition-all duration-300 flex items-center group">
                     <div className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-3"></div>
                     {link.name}
                   </Link>

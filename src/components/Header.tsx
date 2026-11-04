@@ -1,13 +1,17 @@
+"use client";
+
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Menu, X, Home, User, Briefcase, Mail, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   
   const navItems = [{
     name: "Home",
@@ -28,8 +32,8 @@ const Header = () => {
   }];
   
   const isActiveRoute = (path: string) => {
-    if (path === "/" && location.pathname === "/") return true;
-    if (path !== "/" && location.pathname.startsWith(path)) return true;
+    if (path === "/" && pathname === "/") return true;
+    if (path !== "/" && pathname?.startsWith(path)) return true;
     return false;
   };
 
@@ -46,7 +50,7 @@ const Header = () => {
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
-  }, [location.pathname]);
+  }, [pathname]);
   
   return (
     <header className={`fixed top-0 left-0 right-0 z-[100] w-full transition-all duration-500 ${
@@ -57,11 +61,11 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="flex items-center space-x-3 group">
             <div className="relative">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-primary/30 transition-all duration-300 group-hover:border-primary/60 group-hover:shadow-lg group-hover:shadow-primary/20">
                 <img 
-                  src="/lovable-uploads/0b2e3fc5-f4eb-476f-a858-bda20d9e1e4c.png" 
+                  src="/favicon.png" 
                   alt="Robin Syaifuddin" 
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" 
                 />
@@ -84,7 +88,7 @@ const Header = () => {
               return (
                 <Link 
                   key={item.name} 
-                  to={item.href} 
+                  href={item.href} 
                   className={`group relative px-4 xl:px-6 py-2.5 xl:py-3 rounded-xl transition-all duration-300 ${
                     isActive 
                       ? 'text-primary-foreground bg-primary shadow-lg shadow-primary/20 scale-105' 
@@ -105,7 +109,7 @@ const Header = () => {
 
           {/* CTA Button Desktop */}
           <div className="hidden lg:block">
-            <Link to="/contact">
+            <Link href="/contact">
               <Button 
                 variant="outline" 
                 size="sm"
@@ -145,7 +149,7 @@ const Header = () => {
                 return (
                   <Link 
                     key={item.name} 
-                    to={item.href} 
+                    href={item.href} 
                     className={`group relative px-4 py-3 rounded-xl transition-all duration-300 ${
                       isActive 
                         ? 'text-primary-foreground bg-primary shadow-md' 
@@ -167,7 +171,7 @@ const Header = () => {
             
             {/* Mobile CTA */}
             <div className="pt-4 border-t border-border/20">
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
                 <Button 
                   className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium shadow-lg shadow-primary/20"
                   size="lg"

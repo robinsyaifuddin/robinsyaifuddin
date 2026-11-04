@@ -1,73 +1,69 @@
-# Welcome to your Lovable project
+# Robin Syaifuddin — Personal Website & Portfolio
 
-## Project info
+Website portofolio dan profil profesional **Robin Syaifuddin** (Full Stack Developer & Digital Specialist). Dibangun menggunakan arsitektur modern Next.js App Router, TypeScript, Tailwind CSS, dan komponen Shadcn UI.
 
-**URL**: https://lovable.dev/projects/5a20e381-10fd-4df7-967f-75a9ec43966a
+---
 
-## How can I edit this code?
+## ⚡ Tech Stack
 
-There are several ways of editing your application.
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/) & [Shadcn UI](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) & CSS keyframes
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5a20e381-10fd-4df7-967f-75a9ec43966a) and start prompting.
+## 📁 Struktur Proyek
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```text
+├── public/                 # Static assets (gambar profil, favicon, dsb.)
+├── src/
+│   ├── app/                # Next.js App Router (pages & layout)
+│   │   ├── about/          # Halaman Tentang
+│   │   ├── contact/        # Halaman Kontak
+│   │   ├── futuristic/     # Showroom portofolio interaktif
+│   │   ├── portfolio/      # Halaman Portofolio
+│   │   ├── layout.tsx      # Root Layout & Metadata
+│   │   ├── not-found.tsx   # Custom 404 page
+│   │   └── page.tsx        # Halaman Utama (Beranda)
+│   ├── components/         # Komponen Modular & UI
+│   │   └── ui/             # Shadcn UI primitives
+│   ├── hooks/              # Custom React Hooks
+│   ├── lib/                # Helper utilities (cn, dsb.)
+│   └── index.css           # Global stylesheet & Tailwind directives
+├── next.config.js          # Konfigurasi Next.js
+├── tailwind.config.ts      # Konfigurasi Tailwind CSS
+└── tsconfig.json           # Konfigurasi TypeScript
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🚀 Memulai (Local Development)
 
-**Use GitHub Codespaces**
+### 1. Prasyarat
+- Node.js (v18.17+ atau v20+)
+- npm atau pnpm
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 2. Instalasi
+```bash
+npm install
+```
 
-## What technologies are used for this project?
+### 3. Menjalankan Server Pengembangan
+```bash
+npm run dev
+```
+Buka browser di [http://localhost:3000](http://localhost:3000).
 
-This project is built with:
+### 4. Build untuk Production
+```bash
+npm run build
+npm run start
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5a20e381-10fd-4df7-967f-75a9ec43966a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📄 Lisensi
+Hak cipta © 2026 Robin Syaifuddin. Seluruh hak cipta dilindungi.

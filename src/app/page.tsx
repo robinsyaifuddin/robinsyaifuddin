@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -171,7 +172,7 @@ export default function Index() {
           {/* Large Center Portrait */}
           <div className="relative z-10 w-[300px] sm:w-[420px] md:w-[480px] lg:w-[580px] xl:w-[640px] pointer-events-none mt-6 sm:mt-2">
             <img
-              src="/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png"
+              src="/profil-icon.png"
               alt="Robin Syaifuddin"
               className="w-full h-auto object-contain filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)] contrast-105"
             />
