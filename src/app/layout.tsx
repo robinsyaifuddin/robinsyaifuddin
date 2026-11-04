@@ -10,8 +10,11 @@ export const metadata: Metadata = {
   title: "Robin Syaifuddin | Full Stack Developer & Digital Specialist",
   description: "Portofolio profesional Robin Syaifuddin - Full Stack Developer & Digital Specialist. Mahasiswa Teknik Telekomunikasi ITERA.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
     apple: "/favicon.png",
   },
 };

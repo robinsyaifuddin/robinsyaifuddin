@@ -278,9 +278,7 @@ export default function Index() {
             SELECTED PROJECTS
           </h2>
           <a
-            href="https://github.com/robinsyaifuddin"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/portfolio"
             className="text-[11px] sm:text-xs uppercase tracking-widest font-semibold text-[#8b9bb4] hover:text-[#0da2e7] transition-colors flex items-center gap-1.5"
           >
             VIEW ALL PROJECTS <ArrowRight size={13} />
