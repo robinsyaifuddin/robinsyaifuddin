@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   Download,
@@ -503,14 +504,12 @@ export default function Index() {
           <h2 className="text-xs sm:text-sm uppercase tracking-widest font-bold text-white flex items-center gap-2">
             SELECTED PROJECTS
           </h2>
-          <a
-            href="https://github.com/robinsyaifuddin"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/portfolio"
             className="text-[10px] sm:text-xs uppercase tracking-widest font-semibold text-[#8b9bb4] hover:text-[#0da2e7] transition-colors flex items-center gap-1.5"
           >
             VIEW ALL PROJECTS <ArrowRight size={13} />
-          </a>
+          </Link>
         </div>
 
         {/* 3 Projects Row (Responsive Grid: 1 col on mobile, 2 on tablet, 3 on desktop) */}
@@ -579,6 +578,17 @@ export default function Index() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom Centered [VIEW ALL PROJECTS] Button */}
+        <div className="mt-10 sm:mt-12 flex justify-center">
+          <Link
+            href="/portfolio"
+            className="group inline-flex items-center gap-2.5 px-6 py-3 bg-[#0b101a] hover:bg-[#0da2e7] border border-[#162238] hover:border-[#0da2e7] text-white text-xs font-mono font-bold uppercase tracking-widest rounded-sm transition-all duration-200 active:scale-[0.98] shadow-sm hover:shadow-md hover:shadow-[#0da2e7]/20"
+          >
+            <span>VIEW ALL PROJECTS</span>
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </section>
 
