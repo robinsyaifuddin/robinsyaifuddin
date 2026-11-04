@@ -140,30 +140,30 @@ export default function Index() {
   const [selectedProject, setSelectedProject] = useState<typeof PROJECTS[0] | null>(null);
 
   return (
-    <div className="bg-[#050505] text-[#f2efeb] font-sans min-h-screen selection:bg-[#e32b3c] selection:text-white overflow-x-hidden">
+    <div className="bg-[#06080d] text-[#f1f5f9] font-sans min-h-screen selection:bg-[#0da2e7] selection:text-white overflow-x-hidden">
       
       {/* ===================== HERO SECTION ===================== */}
-      <section className="relative min-h-[92vh] sm:min-h-screen bg-[#070707] flex flex-col justify-between overflow-hidden px-4 sm:px-8 lg:px-14 pt-8 pb-10 border-b border-[#1f1a1a]">
+      <section className="relative min-h-[92vh] sm:min-h-screen bg-[#07090e] flex flex-col justify-between overflow-hidden px-4 sm:px-8 lg:px-14 pt-8 pb-10 border-b border-[#121824]">
         
         {/* Top Header Row */}
-        <div className="w-full flex items-center justify-between text-[11px] sm:text-xs tracking-widest uppercase font-semibold text-[#8e8a88] z-30">
+        <div className="w-full flex items-center justify-between text-[11px] sm:text-xs tracking-widest uppercase font-semibold text-[#8b9bb4] z-30">
           <div>
-            <span className="text-[#e32b3c] block font-bold tracking-widest text-[11px] sm:text-xs">FULL STACK DEVELOPER</span>
-            <span className="text-[#a09c9a] text-[10px] tracking-wider">DIGITAL AUTOMATION SPECIALIST</span>
+            <span className="text-[#0da2e7] block font-bold tracking-widest text-[11px] sm:text-xs">FULL STACK DEVELOPER</span>
+            <span className="text-[#94a3b8] text-[10px] tracking-wider">DIGITAL AUTOMATION SPECIALIST</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#e32b3c] animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0da2e7] animate-pulse" />
             <span className="text-white tracking-widest text-[10px] sm:text-[11px]">AVAILABLE FOR FREELANCE & COLLAB</span>
-            <Sparkles size={11} className="text-[#e32b3c]" />
+            <Sparkles size={11} className="text-[#0da2e7]" />
           </div>
         </div>
 
-        {/* Center Canvas: Giant Red Background Title + Big Portrait + Left/Right Cards */}
+        {/* Center Canvas: Giant Azure Background Title + Big Portrait + Left/Right Cards */}
         <div className="relative w-full flex-1 flex items-center justify-center my-4 sm:my-0">
           
-          {/* Giant PORTFOLIO Backdrop Text (Crimson Red) */}
+          {/* Giant PORTFOLIO Backdrop Text (Deep Electric Azure) */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <span className="font-display uppercase tracking-tighter text-[23vw] sm:text-[22vw] md:text-[21vw] lg:text-[19.5vw] text-[#850c18] font-bold leading-none scale-y-110 opacity-90">
+            <span className="font-display uppercase tracking-tighter text-[23vw] sm:text-[22vw] md:text-[21vw] lg:text-[19.5vw] text-[#074668] font-bold leading-none scale-y-110 opacity-70">
               PORTFOLIO
             </span>
           </div>
@@ -176,7 +176,7 @@ export default function Index() {
               className="w-full h-auto object-contain filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)] contrast-105"
             />
             {/* Smooth bottom gradient fade to seamlessly blend into container */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#070707] via-[#070707]/70 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#07090e] via-[#07090e]/70 to-transparent" />
           </div>
 
           {/* Left Hero Card: Hello, I'm ROBIN SYAIFUDDIN */}
@@ -188,15 +188,15 @@ export default function Index() {
               ROBIN <br />
               SYAIFUDDIN
             </h1>
-            <p className="text-[11px] sm:text-xs text-[#e32b3c] font-bold tracking-widest uppercase mt-3 mb-2">
+            <p className="text-[11px] sm:text-xs text-[#0da2e7] font-bold tracking-widest uppercase mt-3 mb-2">
               FULL STACK DEVELOPER & DIGITAL SPECIALIST
             </p>
-            <p className="text-[11px] sm:text-xs text-[#a09c9a] leading-relaxed mb-4 line-clamp-3">
+            <p className="text-[11px] sm:text-xs text-[#94a3b8] leading-relaxed mb-4 line-clamp-3">
               Mahasiswa Teknik Telekomunikasi ITERA yang memadukan rekayasa web modern, performa tinggi, dan otomasi digital yang berdampak nyata.
             </p>
             <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-white font-semibold">
-              <span className="w-2 h-2 rounded-full border border-[#e32b3c] flex items-center justify-center">
-                <span className="w-1 h-1 bg-[#e32b3c] rounded-full" />
+              <span className="w-2 h-2 rounded-full border border-[#0da2e7] flex items-center justify-center">
+                <span className="w-1 h-1 bg-[#0da2e7] rounded-full" />
               </span>
               <span>LAMPUNG / BANTEN • AVAILABLE WORLDWIDE</span>
             </div>
@@ -204,8 +204,8 @@ export default function Index() {
 
           {/* Right Hero Items: Sparkle quote + Vertical Stats */}
           <div className="absolute right-0 top-12 sm:top-16 z-20 hidden md:flex items-center gap-2 max-w-[220px]">
-            <Sparkles size={16} className="text-[#e32b3c] shrink-0" />
-            <p className="text-[11px] text-[#a09c9a] leading-tight">
+            <Sparkles size={16} className="text-[#0da2e7] shrink-0" />
+            <p className="text-[11px] text-[#94a3b8] leading-tight">
               Turning ideas into powerful & scalable digital experiences.
             </p>
           </div>
@@ -214,10 +214,10 @@ export default function Index() {
           <div className="absolute right-0 bottom-6 sm:bottom-12 z-20 space-y-6 text-right sm:text-left pointer-events-auto">
             {STATS.map((stat) => (
               <div key={stat.label} className="group">
-                <p className="font-display text-3xl sm:text-4xl text-[#e32b3c] font-bold leading-none tracking-tight">
+                <p className="font-display text-3xl sm:text-4xl text-[#0da2e7] font-bold leading-none tracking-tight">
                   {stat.value}
                 </p>
-                <p className="text-[9px] sm:text-[10px] text-[#8e8a88] tracking-widest uppercase font-semibold mt-1">
+                <p className="text-[9px] sm:text-[10px] text-[#8b9bb4] tracking-widest uppercase font-semibold mt-1">
                   {stat.label}
                 </p>
               </div>
@@ -227,16 +227,16 @@ export default function Index() {
         </div>
 
         {/* Bottom subtle note / scroll cue */}
-        <div className="w-full flex items-center justify-between pt-4 border-t border-[#1f1a1a]/60 text-[10px] tracking-wider text-[#666] z-20">
+        <div className="w-full flex items-center justify-between pt-4 border-t border-[#121824]/60 text-[10px] tracking-wider text-[#64748b] z-20">
           <span>PORTFOLIO EDITORIAL // EDITION 2025</span>
           <span className="hidden sm:inline">ROBIN SYAIFUDDIN • WEB ARCHITECTURE</span>
         </div>
       </section>
 
       {/* ===================== SELECTED PROJECTS ===================== */}
-      <section id="projects" className="py-16 sm:py-20 px-4 sm:px-8 lg:px-14 border-b border-[#1f1a1a]">
+      <section id="projects" className="py-16 sm:py-20 px-4 sm:px-8 lg:px-14 border-b border-[#121824]">
         {/* Section Header */}
-        <div className="flex items-center justify-between pb-8 border-b border-[#1f1a1a]">
+        <div className="flex items-center justify-between pb-8 border-b border-[#121824]">
           <h2 className="text-xs sm:text-sm uppercase tracking-widest font-bold text-white flex items-center gap-2">
             SELECTED PROJECTS
           </h2>
@@ -244,7 +244,7 @@ export default function Index() {
             href="https://github.com/robinsyaifuddin"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[11px] sm:text-xs uppercase tracking-widest font-semibold text-[#8e8a88] hover:text-[#e32b3c] transition-colors flex items-center gap-1.5"
+            className="text-[11px] sm:text-xs uppercase tracking-widest font-semibold text-[#8b9bb4] hover:text-[#0da2e7] transition-colors flex items-center gap-1.5"
           >
             VIEW ALL PROJECTS <ArrowRight size={13} />
           </a>
@@ -260,12 +260,12 @@ export default function Index() {
             >
               {/* Card Visual Preview Box */}
               <div
-                className={`relative aspect-[16/10] sm:aspect-[4/3] rounded-sm overflow-hidden p-6 flex flex-col justify-between border transition-all duration-300 group-hover:border-[#e32b3c] ${
+                className={`relative aspect-[16/10] sm:aspect-[4/3] rounded-sm overflow-hidden p-6 flex flex-col justify-between border transition-all duration-300 group-hover:border-[#0da2e7] ${
                   proj.theme === "light"
                     ? "bg-[#e5e0d8] text-[#111] border-[#333]"
-                    : proj.theme === "dark-red"
-                    ? "bg-gradient-to-br from-[#120809] to-[#0a0506] text-white border-[#241718]"
-                    : "bg-[#0d0d0d] text-white border-[#1c1c1c]"
+                    : proj.theme === "dark-blue"
+                    ? "bg-gradient-to-br from-[#0b1926] to-[#070e17] text-white border-[#13273c]"
+                    : "bg-[#0b0f16] text-white border-[#16202e]"
                 }`}
               >
                 {/* Header within preview */}
@@ -295,13 +295,13 @@ export default function Index() {
               </div>
 
               {/* Bottom Caption: 01 TITLE / CATEGORY -> */}
-              <div className="flex items-center justify-between pt-4 mt-1 border-t border-[#191919]">
+              <div className="flex items-center justify-between pt-4 mt-1 border-t border-[#131c2a]">
                 <div className="flex items-center gap-3">
-                  <span className="font-display text-xl sm:text-2xl font-bold text-[#e32b3c]">
+                  <span className="font-display text-xl sm:text-2xl font-bold text-[#0da2e7]">
                     {proj.num}
                   </span>
                   <div>
-                    <h4 className="text-xs font-bold text-white tracking-wider uppercase group-hover:text-[#e32b3c] transition-colors">
+                    <h4 className="text-xs font-bold text-white tracking-wider uppercase group-hover:text-[#0da2e7] transition-colors">
                       {proj.title}
                     </h4>
                     <p className="text-[10px] text-[#777] uppercase tracking-wider">
@@ -311,7 +311,7 @@ export default function Index() {
                 </div>
                 <ArrowRight
                   size={15}
-                  className="text-[#555] group-hover:text-[#e32b3c] group-hover:translate-x-1 transition-all"
+                  className="text-[#555] group-hover:text-[#0da2e7] group-hover:translate-x-1 transition-all"
                 />
               </div>
             </div>
@@ -320,17 +320,17 @@ export default function Index() {
       </section>
 
       {/* ===================== EDUCATION & SKILLS + WORK PROCESS + QUOTE ===================== */}
-      <section className="py-16 sm:py-20 px-4 sm:px-8 lg:px-14 border-b border-[#1f1a1a]">
+      <section className="py-16 sm:py-20 px-4 sm:px-8 lg:px-14 border-b border-[#121824]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8">
           
           {/* Column 1: EDUCATION & SKILLS (4 cols) */}
-          <div className="lg:col-span-4 pr-0 lg:pr-6 border-b lg:border-b-0 lg:border-r border-[#1f1a1a] pb-10 lg:pb-0">
-            <h2 className="text-xs sm:text-sm uppercase tracking-widest font-bold text-white mb-8 pb-3 border-b border-[#1f1a1a]">
+          <div className="lg:col-span-4 pr-0 lg:pr-6 border-b lg:border-b-0 lg:border-r border-[#121824] pb-10 lg:pb-0">
+            <h2 className="text-xs sm:text-sm uppercase tracking-widest font-bold text-white mb-8 pb-3 border-b border-[#121824]">
               EDUCATION & SKILLS
             </h2>
 
             {/* Education Subheading */}
-            <p className="text-[10px] font-bold tracking-widest uppercase text-[#e32b3c] mb-4">
+            <p className="text-[10px] font-bold tracking-widest uppercase text-[#0da2e7] mb-4">
               EDUCATION
             </p>
 
@@ -345,7 +345,7 @@ export default function Index() {
                       {edu.institution}
                     </p>
                   </div>
-                  <span className="text-[11px] font-mono text-[#e32b3c] shrink-0 font-medium">
+                  <span className="text-[11px] font-mono text-[#0da2e7] shrink-0 font-medium">
                     {edu.period}
                   </span>
                 </div>
@@ -353,7 +353,7 @@ export default function Index() {
             </div>
 
             {/* Skills Subheading */}
-            <p className="text-[10px] font-bold tracking-widest uppercase text-[#e32b3c] mb-4">
+            <p className="text-[10px] font-bold tracking-widest uppercase text-[#0da2e7] mb-4">
               SKILLS
             </p>
 
@@ -361,7 +361,7 @@ export default function Index() {
               {SKILLS_PILLS.map((skill) => (
                 <span
                   key={skill}
-                  className="text-[9px] font-semibold tracking-wider uppercase px-2.5 py-1.5 bg-[#0e0e0e] text-[#a09c9a] border border-[#222] hover:border-[#e32b3c] hover:text-white transition-colors"
+                  className="text-[9px] font-semibold tracking-wider uppercase px-2.5 py-1.5 bg-[#0b0f16] text-[#94a3b8] border border-[#172233] hover:border-[#0da2e7] hover:text-white transition-colors"
                 >
                   {skill}
                 </span>
@@ -370,30 +370,30 @@ export default function Index() {
           </div>
 
           {/* Column 2: WORK PROCESS (5 cols) */}
-          <div className="lg:col-span-5 px-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-[#1f1a1a] pb-10 lg:pb-0">
-            <h2 className="text-xs sm:text-sm uppercase tracking-widest font-bold text-white mb-8 pb-3 border-b border-[#1f1a1a]">
+          <div className="lg:col-span-5 px-0 lg:px-6 border-b lg:border-b-0 lg:border-r border-[#121824] pb-10 lg:pb-0">
+            <h2 className="text-xs sm:text-sm uppercase tracking-widest font-bold text-white mb-8 pb-3 border-b border-[#121824]">
               WORK PROCESS
             </h2>
 
             {/* Timeline Vertical Process */}
-            <div className="space-y-6 relative before:absolute before:left-[19px] before:top-4 before:bottom-4 before:w-[1px] before:bg-[#222]">
+            <div className="space-y-6 relative before:absolute before:left-[19px] before:top-4 before:bottom-4 before:w-[1px] before:bg-[#1a2536]">
               {WORK_STEPS.map((step) => {
                 const IconComponent = step.icon;
                 return (
                   <div key={step.num} className="flex items-start gap-4 relative">
-                    <span className="w-10 h-10 rounded-full bg-[#0a0a0a] border border-[#282828] text-[#e32b3c] flex items-center justify-center shrink-0 z-10 group-hover:border-[#e32b3c] transition-colors">
+                    <span className="w-10 h-10 rounded-full bg-[#090d14] border border-[#192435] text-[#0da2e7] flex items-center justify-center shrink-0 z-10 group-hover:border-[#0da2e7] transition-colors">
                       <IconComponent size={14} />
                     </span>
                     <div className="pt-1">
                       <div className="flex items-center gap-2">
-                        <span className="text-[10px] font-mono text-[#e32b3c] font-bold">
+                        <span className="text-[10px] font-mono text-[#0da2e7] font-bold">
                           {step.num}
                         </span>
-                        <h3 className="text-xs font-bold uppercase tracking-wider text-[#e32b3c]">
+                        <h3 className="text-xs font-bold uppercase tracking-wider text-[#0da2e7]">
                           {step.title}
                         </h3>
                       </div>
-                      <p className="text-[11px] text-[#8e8a88] leading-relaxed mt-1">
+                      <p className="text-[11px] text-[#8b9bb4] leading-relaxed mt-1">
                         {step.desc}
                       </p>
                     </div>
@@ -403,10 +403,10 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Column 3: QUOTE & CALLOUT (3 cols) Maroon Red Block */}
-          <div className="lg:col-span-3 flex flex-col justify-between p-8 bg-[#180507] border border-[#3b0d12] rounded-sm text-white">
+          {/* Column 3: QUOTE & CALLOUT (3 cols) Deep Azure Block */}
+          <div className="lg:col-span-3 flex flex-col justify-between p-8 bg-[#07131e] border border-[#0d2a42] rounded-sm text-white">
             <div>
-              <Quote size={36} className="text-[#e32b3c] mb-6 opacity-80" />
+              <Quote size={36} className="text-[#0da2e7] mb-6 opacity-80" />
               <blockquote className="text-lg font-medium leading-snug tracking-tight text-white/95 mb-6">
                 “Good design is not just how it looks, but how it works and scales.”
               </blockquote>
@@ -415,14 +415,14 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="pt-8 border-t border-[#3a1015] mt-10">
-              <p className="text-[9px] uppercase tracking-widest font-bold text-[#e32b3c] mb-1">
+            <div className="pt-8 border-t border-[#0e314e] mt-10">
+              <p className="text-[9px] uppercase tracking-widest font-bold text-[#0da2e7] mb-1">
                 LET&apos;S CREATE
               </p>
               <p className="text-xs font-bold uppercase tracking-wider text-white">
                 SOMETHING GREAT TOGETHER.
               </p>
-              <div className="w-3 h-3 text-[#e32b3c] mt-4 font-bold">+</div>
+              <div className="w-3 h-3 text-[#0da2e7] mt-4 font-bold">+</div>
             </div>
           </div>
 
@@ -430,7 +430,7 @@ export default function Index() {
       </section>
 
       {/* ===================== LET'S WORK TOGETHER (CONTACT) ===================== */}
-      <section id="contact" className="py-16 sm:py-20 px-4 sm:px-8 lg:px-14 border-b border-[#1f1a1a]">
+      <section id="contact" className="py-16 sm:py-20 px-4 sm:px-8 lg:px-14 border-b border-[#121824]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
           {/* Left: Contact Info */}
@@ -440,14 +440,14 @@ export default function Index() {
                 <h2 className="font-display text-4xl sm:text-6xl uppercase tracking-tight text-white leading-none">
                   LET&apos;S WORK
                 </h2>
-                <Sparkles size={18} className="text-[#e32b3c]" />
+                <Sparkles size={18} className="text-[#0da2e7]" />
               </div>
               <h2 className="font-display text-4xl sm:text-6xl uppercase tracking-tight text-white leading-none mt-1">
                 TOGETHER
               </h2>
             </div>
 
-            <p className="text-xs sm:text-sm text-[#8e8a88] max-w-md leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#8b9bb4] max-w-md leading-relaxed">
               I&apos;m currently open for new projects and collaborations. Let&apos;s create something amazing that drives real measurable results.
             </p>
 
@@ -455,9 +455,9 @@ export default function Index() {
             <div className="space-y-3.5 pt-2">
               <a
                 href="mailto:mr.robinsyaifuddin@gmail.com"
-                className="flex items-center gap-3.5 text-xs text-[#a09c9a] hover:text-white transition-colors"
+                className="flex items-center gap-3.5 text-xs text-[#94a3b8] hover:text-white transition-colors"
               >
-                <span className="w-8 h-8 rounded-full bg-[#121212] border border-[#242424] flex items-center justify-center text-[#e32b3c]">
+                <span className="w-8 h-8 rounded-full bg-[#0b1018] border border-[#172335] flex items-center justify-center text-[#0da2e7]">
                   <Mail size={13} />
                 </span>
                 <span>mr.robinsyaifuddin@gmail.com</span>
@@ -467,9 +467,9 @@ export default function Index() {
                 href="https://digibooster.web.id"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 text-xs text-[#a09c9a] hover:text-white transition-colors"
+                className="flex items-center gap-3.5 text-xs text-[#94a3b8] hover:text-white transition-colors"
               >
-                <span className="w-8 h-8 rounded-full bg-[#121212] border border-[#242424] flex items-center justify-center text-[#e32b3c]">
+                <span className="w-8 h-8 rounded-full bg-[#0b1018] border border-[#172335] flex items-center justify-center text-[#0da2e7]">
                   <Globe size={13} />
                 </span>
                 <span>www.digibooster.web.id</span>
@@ -479,29 +479,29 @@ export default function Index() {
                 href="https://wa.me/62887437525303"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3.5 text-xs text-[#a09c9a] hover:text-white transition-colors"
+                className="flex items-center gap-3.5 text-xs text-[#94a3b8] hover:text-white transition-colors"
               >
-                <span className="w-8 h-8 rounded-full bg-[#121212] border border-[#242424] flex items-center justify-center text-[#e32b3c]">
+                <span className="w-8 h-8 rounded-full bg-[#0b1018] border border-[#172335] flex items-center justify-center text-[#0da2e7]">
                   <Phone size={13} />
                 </span>
                 <span>+62 887-4375-25303 (WhatsApp)</span>
               </a>
 
-              <div className="flex items-center gap-3.5 text-xs text-[#a09c9a]">
-                <span className="w-8 h-8 rounded-full bg-[#121212] border border-[#242424] flex items-center justify-center text-[#e32b3c]">
+              <div className="flex items-center gap-3.5 text-xs text-[#94a3b8]">
+                <span className="w-8 h-8 rounded-full bg-[#0b1018] border border-[#172335] flex items-center justify-center text-[#0da2e7]">
                   <MapPin size={13} />
                 </span>
                 <span>Lampung / Banten, Indonesia</span>
               </div>
             </div>
 
-            {/* Red Available pill / button */}
+            {/* Cyan/Azure Available pill / button */}
             <div className="pt-4">
               <a
                 href="https://wa.me/62887437525303"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e32b3c] text-[10px] uppercase tracking-widest font-semibold text-[#e32b3c] hover:bg-[#e32b3c] hover:text-white transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#0da2e7] text-[10px] uppercase tracking-widest font-semibold text-[#0da2e7] hover:bg-[#0da2e7] hover:text-white transition-all"
               >
                 <ArrowRight size={12} />
                 <span>AVAILABLE FOR FREELANCE</span>
@@ -511,17 +511,17 @@ export default function Index() {
 
           {/* Right: Workspace & Laptop Mockup Visual */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm sm:max-w-md p-6 bg-[#0c0c0c] border border-[#1f1a1a] rounded-sm">
-              <div className="flex items-center justify-between pb-4 border-b border-[#1f1a1a] text-[10px] text-[#666]">
+            <div className="relative w-full max-w-sm sm:max-w-md p-6 bg-[#090d15] border border-[#121824] rounded-sm">
+              <div className="flex items-center justify-between pb-4 border-b border-[#121824] text-[10px] text-[#64748b]">
                 <span className="flex items-center gap-1.5 text-white font-mono">
-                  <Laptop size={12} className="text-[#e32b3c]" /> ROBIN WORKSPACE
+                  <Laptop size={12} className="text-[#0da2e7]" /> ROBIN WORKSPACE
                 </span>
-                <span className="text-[#e32b3c] font-semibold">ONLINE</span>
+                <span className="text-[#0da2e7] font-semibold">ONLINE</span>
               </div>
 
-              <div className="my-6 aspect-video bg-[#050505] border border-[#222] rounded flex flex-col justify-between p-4 relative overflow-hidden group">
-                <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#e32b3c]/20 blur-3xl pointer-events-none" />
-                <div className="text-[10px] uppercase tracking-wider text-[#e32b3c] font-bold">
+              <div className="my-6 aspect-video bg-[#05080e] border border-[#162030] rounded flex flex-col justify-between p-4 relative overflow-hidden group">
+                <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#0da2e7]/20 blur-3xl pointer-events-none" />
+                <div className="text-[10px] uppercase tracking-wider text-[#0da2e7] font-bold">
                   WE BUILD DIGITAL EXPERIENCES
                 </div>
                 <div className="space-y-1">
@@ -533,7 +533,7 @@ export default function Index() {
                   </p>
                 </div>
                 <div className="flex gap-2">
-                  <span className="h-1.5 w-8 bg-[#e32b3c] rounded-full" />
+                  <span className="h-1.5 w-8 bg-[#0da2e7] rounded-full" />
                   <span className="h-1.5 w-3 bg-[#333] rounded-full" />
                 </div>
               </div>
@@ -542,7 +542,7 @@ export default function Index() {
                 <span>Code, Coffee & Craft</span>
                 <a
                   href="mailto:mr.robinsyaifuddin@gmail.com"
-                  className="text-white hover:text-[#e32b3c] font-semibold flex items-center gap-1"
+                  className="text-white hover:text-[#0da2e7] font-semibold flex items-center gap-1"
                 >
                   Send Inquiry →
                 </a>
@@ -554,7 +554,7 @@ export default function Index() {
       </section>
 
       {/* ===================== FOOTER ===================== */}
-      <footer className="py-8 px-4 sm:px-8 lg:px-14 bg-[#050505] text-[10px] text-[#666] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <footer className="py-8 px-4 sm:px-8 lg:px-14 bg-[#05080e] text-[10px] text-[#64748b] flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>
           <span className="text-white font-display text-sm tracking-wider">ROBIN SYAIFUDDIN</span> • © {new Date().getFullYear()} All Rights Reserved.
         </div>
@@ -573,7 +573,7 @@ export default function Index() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="bg-[#0c0c0c] border border-[#2a2a2a] max-w-lg w-full p-6 sm:p-8 relative"
+              className="bg-[#0b0f17] border border-[#1b2637] max-w-lg w-full p-6 sm:p-8 relative"
             >
               <button
                 onClick={() => setSelectedProject(null)}
@@ -583,24 +583,24 @@ export default function Index() {
                 <X size={18} />
               </button>
 
-              <span className="text-[10px] font-mono font-bold text-[#e32b3c]">
+              <span className="text-[10px] font-mono font-bold text-[#0da2e7]">
                 PROJECT {selectedProject.num} // {selectedProject.year}
               </span>
               <h3 className="text-2xl font-display uppercase tracking-tight text-white mt-1 mb-2">
                 {selectedProject.title}
               </h3>
-              <p className="text-xs text-[#a09c9a] mb-6 leading-relaxed">
+              <p className="text-xs text-[#94a3b8] mb-6 leading-relaxed">
                 {selectedProject.summary}
               </p>
 
-              <div className="space-y-3 text-xs mb-6 border-t border-b border-[#1f1a1a] py-4">
+              <div className="space-y-3 text-xs mb-6 border-t border-b border-[#151f2e] py-4">
                 <div>
                   <span className="text-white font-semibold">Dampak / Value:</span>{" "}
-                  <span className="text-[#a09c9a]">{selectedProject.impact}</span>
+                  <span className="text-[#94a3b8]">{selectedProject.impact}</span>
                 </div>
                 <div>
                   <span className="text-white font-semibold">Stack:</span>{" "}
-                  <span className="text-[#e32b3c]">{selectedProject.tech.join(", ")}</span>
+                  <span className="text-[#0da2e7]">{selectedProject.tech.join(", ")}</span>
                 </div>
               </div>
 
@@ -609,13 +609,13 @@ export default function Index() {
                   href={selectedProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 py-2.5 bg-[#e32b3c] hover:bg-[#c92030] text-white text-[11px] uppercase tracking-wider font-semibold text-center flex items-center justify-center gap-1.5 transition-colors"
+                  className="flex-1 py-2.5 bg-[#0da2e7] hover:bg-[#0883bd] text-white text-[11px] uppercase tracking-wider font-semibold text-center flex items-center justify-center gap-1.5 transition-colors"
                 >
                   Visit Live Site <ExternalLink size={13} />
                 </a>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="px-5 py-2.5 border border-[#333] hover:border-white text-[11px] uppercase tracking-wider font-semibold text-white transition-colors"
+                  className="px-5 py-2.5 border border-[#1f2d42] hover:border-white text-[11px] uppercase tracking-wider font-semibold text-white transition-colors"
                 >
                   Close
                 </button>
