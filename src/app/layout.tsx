@@ -27,12 +27,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Oswald:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
       <body className="min-h-screen bg-[#07090e] text-[#f1f5f9] antialiased selection:bg-[#0da2e7]/30 selection:text-white flex flex-col justify-between">
-        <Header />
         <main className="flex-1">
           <PageTransition>
             {children}

@@ -29,8 +29,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Manrope"', 'sans-serif'],
+				sans: ['"Plus Jakarta Sans"', '"Manrope"', 'sans-serif'],
 				display: ['"Anton"', 'Impact', 'sans-serif'],
+				condensed: ['"Oswald"', 'sans-serif'],
+				editorial: ['"Syne"', 'sans-serif'],
 				handwriting: ['"Caveat"', 'cursive'],
 			},
 			colors: {

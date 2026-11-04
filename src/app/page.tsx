@@ -144,91 +144,127 @@ export default function Index() {
     <div className="bg-[#06080d] text-[#f1f5f9] font-sans min-h-screen selection:bg-[#0da2e7] selection:text-white overflow-x-hidden">
       
       {/* ===================== HERO SECTION ===================== */}
-      <section className="relative min-h-[calc(100vh-5rem)] bg-[#07090e] flex flex-col justify-between overflow-hidden px-4 sm:px-8 lg:px-14 pt-20 sm:pt-24 pb-6 border-b border-[#121824]">
+      {/* Full-width seamless hero, no rounded box/shape border, fits 100vh viewport */}
+      <section className="relative w-full h-screen min-h-[640px] max-h-[1080px] bg-[#06080d] flex flex-col justify-between overflow-hidden px-5 sm:px-10 lg:px-14 pt-6 sm:pt-8 pb-4">
         
+        {/* Subtle Ambient Electric Blue Glow in background */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] bg-[radial-gradient(circle_at_center,rgba(13,162,231,0.18)_0%,transparent_65%)] pointer-events-none blur-3xl z-0" />
+
         {/* Top Header Row */}
-        <div className="w-full flex items-center justify-between text-[11px] sm:text-xs tracking-widest uppercase font-semibold text-[#8b9bb4] z-30">
-          <div>
-            <span className="text-[#0da2e7] block font-bold tracking-widest text-[11px] sm:text-xs">FULL STACK DEVELOPER</span>
-            <span className="text-[#94a3b8] text-[10px] tracking-wider">DIGITAL AUTOMATION SPECIALIST</span>
+        <div className="relative w-full flex items-center justify-between text-[11px] sm:text-xs tracking-[0.2em] uppercase font-bold z-30">
+          <div className="space-y-0.5">
+            <span className="text-[#0da2e7] block text-[11px] sm:text-xs font-extrabold tracking-[0.22em]">
+              WEB DESIGNER
+            </span>
+            <span className="text-white/80 text-[10px] sm:text-[11px] tracking-[0.2em] font-semibold">
+              DIGITAL CREATOR
+            </span>
           </div>
+          
           <div className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0da2e7] animate-pulse" />
-            <span className="text-white tracking-widest text-[10px] sm:text-[11px]">AVAILABLE FOR FREELANCE & COLLAB</span>
-            <Sparkles size={11} className="text-[#0da2e7]" />
+            <span className="text-white/80 tracking-[0.2em] text-[10px] sm:text-[11px] font-semibold">
+              AVAILABLE FOR FREELANCE
+            </span>
+            <span className="text-[#0da2e7] text-sm font-bold leading-none select-none">✦</span>
           </div>
         </div>
 
-        {/* Center Canvas: Giant Azure Background Title + Big Portrait + Left/Right Cards */}
-        <div className="relative w-full flex-1 flex items-center justify-center my-4 sm:my-0">
+        {/* Center Canvas: Giant Electric Blue PORTFOLIO Backdrop + Cutout Portrait + Side Overlays */}
+        <div className="relative w-full flex-1 flex items-center justify-center overflow-hidden">
           
-          {/* Giant PORTFOLIO Backdrop Text (Deep Electric Azure) */}
+          {/* Giant PORTFOLIO Backdrop Text (Tighter Kerning, Non-Bold, Subtle White Glow Shadow) */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <span className="font-display uppercase tracking-tighter text-[23vw] sm:text-[22vw] md:text-[21vw] lg:text-[19.5vw] text-[#074668] font-bold leading-none scale-y-110 opacity-70">
+            <span className="font-condensed uppercase tracking-[-0.04em] text-[27vw] sm:text-[25vw] md:text-[23vw] lg:text-[21vw] text-[#0ea5e9]/40 font-normal leading-none scale-y-110 drop-shadow-[0_0_25px_rgba(255,255,255,0.22)]">
               PORTFOLIO
             </span>
           </div>
 
-          {/* Large Center Portrait */}
-          <div className="relative z-10 w-[300px] sm:w-[400px] md:w-[460px] lg:w-[530px] xl:w-[580px] pointer-events-none -mt-4 sm:-mt-8">
+          {/* Center Portrait: Lowered slightly with ample vertical room so hair/head is completely intact */}
+          <div className="relative z-10 w-[330px] sm:w-[450px] md:w-[530px] lg:w-[610px] xl:w-[670px] max-h-full flex items-end justify-center pointer-events-none self-end -mb-2 sm:-mb-3">
             <img
               src="/profil-icon.png"
               alt="Robin Syaifuddin"
-              className="w-full h-auto object-contain filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)] contrast-105"
+              className="w-full h-auto max-h-[82vh] object-contain object-bottom filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)]"
             />
-            {/* Smooth bottom gradient fade to seamlessly blend into container */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#07090e] via-[#07090e]/70 to-transparent" />
+            {/* Natural bottom fade into the dark background */}
+            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#06080d] via-[#06080d]/85 to-transparent" />
           </div>
 
-          {/* Left Hero Card: Hello, I'm ROBIN SYAIFUDDIN */}
-          <div className="absolute left-0 bottom-2 sm:bottom-6 z-20 max-w-[270px] sm:max-w-xs md:max-w-sm pointer-events-auto">
-            <p className="font-handwriting text-2xl sm:text-3xl text-white/90 italic mb-1 tracking-wide">
+          {/* Left Column Overlay: Hello, I'm + Huge Stacked Name + Role + Bio + Location Pill (naik ke atas sedikit) */}
+          <div className="absolute left-0 bottom-8 sm:bottom-12 lg:bottom-14 z-20 max-w-[300px] sm:max-w-sm md:max-w-md pointer-events-auto">
+            <p className="font-handwriting text-3xl sm:text-4xl text-[#0da2e7] italic mb-1 tracking-wide drop-shadow-[0_0_12px_rgba(13,162,231,0.35)]">
               Hello, I&apos;m
             </p>
-            <h1 className="font-display uppercase text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-[0.92] drop-shadow-lg">
+            <h1 className="font-display uppercase text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] text-white tracking-tight leading-[0.88] drop-shadow-[0_4px_14px_rgba(0,0,0,0.85)] font-black">
               ROBIN <br />
               SYAIFUDDIN
             </h1>
-            <p className="text-[11px] sm:text-xs text-[#0da2e7] font-bold tracking-widest uppercase mt-3 mb-2">
-              FULL STACK DEVELOPER & DIGITAL SPECIALIST
+            
+            <div className="mt-3.5 mb-2.5">
+              <p className="text-xs sm:text-sm text-[#0da2e7] font-black tracking-[0.2em] uppercase">
+                WEB DESIGNER &amp;
+              </p>
+              <p className="text-xs sm:text-sm text-[#0da2e7] font-black tracking-[0.2em] uppercase">
+                UI/UX CREATOR
+              </p>
+            </div>
+
+            <p className="text-xs sm:text-sm text-[#94a3b8] leading-relaxed mb-4 max-w-[300px] sm:max-w-[360px] line-clamp-3 sm:line-clamp-none">
+              I design and build stylish, user-focused web experiences that combine creativity with strategy. Passionate about clean design, smooth interactions, and details that make a difference.
             </p>
-            <p className="text-[11px] sm:text-xs text-[#94a3b8] leading-relaxed mb-4 line-clamp-3">
-              Mahasiswa Teknik Telekomunikasi ITERA yang memadukan rekayasa web modern, performa tinggi, dan otomasi digital yang berdampak nyata.
-            </p>
-            <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-white font-semibold">
-              <span className="w-2 h-2 rounded-full border border-[#0da2e7] flex items-center justify-center">
-                <span className="w-1 h-1 bg-[#0da2e7] rounded-full" />
+
+            <div className="inline-flex items-center gap-2 text-[11px] sm:text-xs tracking-[0.18em] uppercase text-white/80 font-bold">
+              <span className="w-4 h-4 rounded-full border border-white/30 flex items-center justify-center text-[8px] text-[#0da2e7]">
+                ◎
               </span>
-              <span>LAMPUNG / BANTEN • AVAILABLE WORLDWIDE</span>
+              <span>AVAILABLE WORLDWIDE</span>
             </div>
           </div>
 
-          {/* Right Hero Items: Sparkle quote + Vertical Stats */}
-          <div className="absolute right-0 top-6 sm:top-8 z-20 hidden md:flex items-center gap-2 max-w-[220px]">
-            <Sparkles size={16} className="text-[#0da2e7] shrink-0" />
-            <p className="text-[11px] text-[#94a3b8] leading-tight">
-              Turning ideas into powerful & scalable digital experiences.
+          {/* Right Middle Compass/Badge & Tagline (geser ke kiri dan naik ke atas) */}
+          <div className="absolute right-4 sm:right-8 lg:right-12 top-[16%] sm:top-[18%] -translate-y-1/2 z-20 hidden md:flex items-center gap-3.5 max-w-[260px]">
+            <div className="w-11 h-11 rounded-full border border-[#0da2e7]/40 flex items-center justify-center text-[#0da2e7] bg-[#06080d]/80 backdrop-blur-sm shrink-0 shadow-[0_0_15px_rgba(13,162,231,0.2)]">
+              <span className="text-base font-bold">✦</span>
+            </div>
+            <p className="text-xs sm:text-[13px] text-[#94a3b8] leading-snug">
+              Turning ideas into powerful digital experiences.
             </p>
           </div>
 
-          {/* Right Stats Vertical Counter */}
-          <div className="absolute right-0 bottom-2 sm:bottom-6 z-20 space-y-6 text-right sm:text-left pointer-events-auto">
-            {STATS.map((stat) => (
-              <div key={stat.label} className="group">
-                <p className="font-display text-3xl sm:text-4xl text-[#0da2e7] font-bold leading-none tracking-tight">
-                  {stat.value}
-                </p>
-                <p className="text-[9px] sm:text-[10px] text-[#8b9bb4] tracking-widest uppercase font-semibold mt-1">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+          {/* Right Bottom Stats: Azure Big Numbers with Clean Labels (geser ke kiri sedikit) */}
+          <div className="absolute right-4 sm:right-8 lg:right-12 bottom-8 sm:bottom-12 lg:bottom-14 z-20 space-y-3.5 sm:space-y-4 text-left pointer-events-auto">
+            <div className="flex items-center gap-4 py-1">
+              <span className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] text-[#0da2e7] font-black leading-none min-w-[65px]">
+                3+
+              </span>
+              <span className="text-[10px] sm:text-[11px] text-white/70 tracking-[0.18em] uppercase font-bold leading-tight">
+                YEARS<br />EXPERIENCE
+              </span>
+            </div>
+
+            <div className="flex items-center gap-4 py-1">
+              <span className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] text-[#0da2e7] font-black leading-none min-w-[65px]">
+                40+
+              </span>
+              <span className="text-[10px] sm:text-[11px] text-white/70 tracking-[0.18em] uppercase font-bold leading-tight">
+                PROJECTS<br />COMPLETED
+              </span>
+            </div>
+
+            <div className="flex items-center gap-4 py-1">
+              <span className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] text-[#0da2e7] font-black leading-none min-w-[65px]">
+                20+
+              </span>
+              <span className="text-[10px] sm:text-[11px] text-white/70 tracking-[0.18em] uppercase font-bold leading-tight">
+                HAPPY<br />CLIENTS
+              </span>
+            </div>
           </div>
 
         </div>
 
         {/* Bottom subtle note / scroll cue */}
-        <div className="w-full flex items-center justify-between pt-4 border-t border-[#121824]/60 text-[10px] tracking-wider text-[#64748b] z-20">
+        <div className="w-full flex items-center justify-between pt-3 border-t border-[#121824]/60 text-[10px] tracking-wider text-[#64748b] z-20">
           <span>PORTFOLIO EDITORIAL // EDITION 2025</span>
           <span className="hidden sm:inline">ROBIN SYAIFUDDIN • WEB ARCHITECTURE</span>
         </div>
