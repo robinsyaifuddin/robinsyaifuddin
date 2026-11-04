@@ -6,25 +6,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3.5%; /* #090909 */
-    --foreground: 40 15% 94%; /* #f2efeb */
-    --card: 0 0% 6.3%; /* #101010 */
-    --card-foreground: 40 15% 94%;
-    --popover: 0 0% 6.3%;
-    --popover-foreground: 40 15% 94%;
-    --primary: 355 77% 53%; /* #e32b3c Editorial Cinema Red */
+    --background: 220 25% 4%; /* #07090e Deep Obsidian */
+    --foreground: 210 20% 96%; /* #f1f5f9 Crisp Slate */
+    --card: 220 22% 7%; /* #0c1017 Surface */
+    --card-foreground: 210 20% 96%;
+    --popover: 220 22% 7%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 199 90% 48%; /* #0da2e7 Vivid Electric Azure */
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 40 15% 94%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 20 2% 62%; /* #a09c9a */
-    --accent: 355 77% 53%;
+    --secondary: 220 18% 13%;
+    --secondary-foreground: 210 20% 96%;
+    --muted: 220 18% 12%;
+    --muted-foreground: 215 14% 63%; /* #94a3b8 Slate Muted */
+    --accent: 199 90% 48%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 8% 15%; /* #292323 */
-    --input: 0 8% 15%;
-    --ring: 355 77% 53%;
+    --border: 220 16% 14%; /* Subtle Slate Border */
+    --input: 220 16% 14%;
+    --ring: 199 90% 48%;
     --radius: 0.5rem;
   }
 }
@@ -38,7 +38,7 @@
   }
   body {
     @apply bg-background text-foreground min-h-screen antialiased font-sans selection:bg-primary selection:text-white;
-    background-color: #090909;
+    background-color: #07090e;
   }
 }
 

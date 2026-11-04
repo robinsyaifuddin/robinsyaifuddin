@@ -82,7 +82,7 @@ const HeroSection = () => {
               
               {/* Profile Image with Glow */}
               <div className="absolute inset-8 sm:inset-10 lg:inset-12 rounded-full overflow-hidden shadow-[0_0_30px_rgba(255,102,0,0.4)]">
-                <img src="/lovable-uploads/d0cfe490-7b8f-4828-9c87-686191456de5.png" alt="Robin Syaifuddin" className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+                <img src="/hero-profile-dark.jpg" alt="Robin Syaifuddin" className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
               </div>
 
               {/* Floating Tech Icons - Mobile Optimized */}

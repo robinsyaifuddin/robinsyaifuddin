@@ -60,7 +60,7 @@ const PROJECTS = [
     tech: ["React", "TypeScript", "Tailwind CSS"],
     url: "https://lamselmaju-id.lovable.app",
     tagline: "EKSPLORASI PARIWISATA & UMKM MODERN",
-    theme: "dark-red",
+    theme: "dark-blue",
   },
 ];
 
