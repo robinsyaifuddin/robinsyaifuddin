@@ -3,12 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  TACTILE_TRANSITION,
-  QUICK_TRANSITION,
-  VIEWPORT_ONCE,
-} from "@/lib/motion";
 import {
   ArrowUpRight,
   Download,
@@ -144,13 +138,7 @@ export default function Footer() {
       <div className="max-w-[1536px] w-full mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 lg:py-20 space-y-12 sm:space-y-16 lg:space-y-20">
 
         {/* SECTION 2: TRUSTED BY / PARTNERS (Middle Ribbon) */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT_ONCE}
-          transition={{ duration: 0.35, ease: TACTILE_TRANSITION.ease }}
-          className="py-4 sm:py-6 border-b border-[#151f2e] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-y-3 gap-x-8"
-        >
+        <div className="py-4 sm:py-6 border-b border-[#151f2e] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-y-3 gap-x-8">
           <div className="flex items-center gap-2">
             <span className="text-[#0da2e7] text-xs font-bold tracking-[0.2em] uppercase">
               TRUSTED BY
@@ -166,16 +154,10 @@ export default function Footer() {
               </span>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* SECTION 3: CTA HERO BLOCK & ROBIN AI LAB WORKSPACE */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT_ONCE}
-          transition={{ duration: 0.45, ease: TACTILE_TRANSITION.ease }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch pb-10 sm:pb-14 border-b border-[#151f2e]"
-        >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch pb-10 sm:pb-14 border-b border-[#151f2e]">
           
           {/* Big Blue Banner CTA (Let's Create Something Great Together) - 7 cols */}
           <div className="lg:col-span-7 text-white p-6 sm:p-10 lg:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative group overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('/picture-background.png')" }}>
@@ -195,20 +177,17 @@ export default function Footer() {
             </div>
             
             {/* Circular Arrow Button with hover physics */}
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
+            <a
               href="#contact"
               aria-label="Menuju formulir pesan"
-              className="relative z-10 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-white text-[#0da2e7] flex items-center justify-center shrink-0 shadow-lg"
+              className="relative z-10 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-white text-[#0da2e7] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 active:scale-95 transition-all duration-300"
             >
               <ArrowUpRight
                 size={28}
                 strokeWidth={2.2}
                 className="sm:w-[34px] sm:h-[34px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
               />
-            </motion.a>
+            </a>
 
             {/* Subtle background decoration with low opacity */}
             <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
@@ -258,17 +237,10 @@ export default function Footer() {
             </div>
           </div>
 
-        </motion.div>
+        </div>
 
         {/* SECTION 4: TESTIMONIALS & GET IN TOUCH (Diletakkan di paling bawah footer) */}
-        <motion.div
-          id="contact"
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT_ONCE}
-          transition={{ duration: 0.45, ease: TACTILE_TRANSITION.ease }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch pt-2"
-        >
+        <div id="contact" className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch pt-2">
           
           {/* SISI KIRI: TESTIMONIALS (5 cols) */}
           <div className="lg:col-span-5 flex flex-col justify-between">
@@ -443,23 +415,20 @@ export default function Footer() {
                   </div>
 
                   {/* Tombol Send Message Biru Elektrik Web */}
-                  <motion.button
-                    whileHover={{ scale: 1.01 }}
-                    whileTap={{ scale: 0.98 }}
-                    transition={{ duration: 0.15 }}
+                  <button
                     type="submit"
-                    className="w-full py-3.5 px-6 bg-[#0da2e7] hover:bg-[#0887c2] text-white text-xs font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-sm transition-colors shadow-lg shadow-[#0da2e7]/20 group"
+                    className="w-full py-3.5 px-6 bg-[#0da2e7] hover:bg-[#0887c2] active:scale-[0.99] text-white text-xs font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2 rounded-sm transition-all shadow-lg shadow-[#0da2e7]/20 group"
                   >
                     <span>SEND MESSAGE</span>
                     <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
-                  </motion.button>
+                  </button>
                 </form>
               </div>
 
             </div>
           </div>
 
-        </motion.div>
+        </div>
 
         {/* SECTION 5: COPYRIGHT BAR (Sub-footer) */}
         <div className="pt-6 border-t border-[#151f2e] flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] tracking-wider uppercase text-[#64748b]">

@@ -71,7 +71,7 @@ const About = () => {
   ];
 
   const trainings = [
-    "Peserta Leadership Development Program – Ikatan Mahasiswa Lampung Timur 2025",
+    "Peserta Leadership Development Program â€“ Ikatan Mahasiswa Lampung Timur 2025",
     "Peserta Latihan Keterampilan Manajemen Mahasiswa TD-ITERA 2024",
     "Peserta Inspiring Leader Camp Batch 3 - Yayasan Duta Inspirasi Indonesia 2023",
     "Peserta International Model United Nations, Online Conference 94.0, - International Global Network 2022",
@@ -80,10 +80,10 @@ const About = () => {
 
   const certifications = [
     "Sertifikasi Front Office Agroforestri ITERA - Agropreneur ITERA",
-    "Certificate of Competence – Website Creation (habiskerja.com)",
+    "Certificate of Competence â€“ Website Creation (habiskerja.com)",
     "Sertifikat WordPress dari Dasar Hingga Mahir (kursusdigital.id)",
     "Sertifikat Digital Marketing dari Dasar Hingga Mahir (kursusdigital.id)",
-    "Certificate of Completion – HTML & CSS for Beginners (Learnoverse)"
+    "Certificate of Completion â€“ HTML & CSS for Beginners (Learnoverse)"
   ];
 
   return (
