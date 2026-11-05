@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Reveal from "@/components/Reveal";
 import {
   ArrowUpRight,
   Download,
@@ -138,7 +139,7 @@ export default function Footer() {
       <div className="max-w-[1536px] w-full mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-12 sm:py-16 lg:py-20 space-y-12 sm:space-y-16 lg:space-y-20">
 
         {/* SECTION 2: TRUSTED BY / PARTNERS (Middle Ribbon) */}
-        <div className="py-4 sm:py-6 border-b border-[#151f2e] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-y-3 gap-x-8">
+        <Reveal direction="up" distance={20} className="py-4 sm:py-6 border-b border-[#151f2e] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-y-3 gap-x-8">
           <div className="flex items-center gap-2">
             <span className="text-[#0da2e7] text-xs font-bold tracking-[0.2em] uppercase">
               TRUSTED BY
@@ -154,47 +155,49 @@ export default function Footer() {
               </span>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* SECTION 3: CTA HERO BLOCK & ROBIN AI LAB WORKSPACE */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch pb-10 sm:pb-14 border-b border-[#151f2e]">
           
           {/* Big Blue Banner CTA (Let's Create Something Great Together) - 7 cols */}
-          <div className="lg:col-span-7 text-white p-6 sm:p-10 lg:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative group overflow-hidden bg-center bg-cover bg-no-repeat" style={{ backgroundImage: "url('/picture-background.png')" }}>
-            {/* Gradasi gelap sekeliling (vignette ditebalkan sedikit) */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.65)_100%)] pointer-events-none z-0" />
-            
-            {/* Gradasi gelap dominan dari bawah (ditebalkan dan lebih pekat) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none z-0" />
+          <Reveal direction="up" distance={28} delay={0.1} className="lg:col-span-7 flex flex-col">
+            <div className="h-full text-white p-6 sm:p-10 lg:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative group overflow-hidden bg-center bg-cover bg-no-repeat rounded-sm" style={{ backgroundImage: "url('/picture-background.png')" }}>
+              {/* Gradasi gelap sekeliling (vignette ditebalkan sedikit) */}
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.65)_100%)] pointer-events-none z-0" />
+              
+              {/* Gradasi gelap dominan dari bawah (ditebalkan dan lebih pekat) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent pointer-events-none z-0" />
 
-            {/* Lapisan biru di atas background (~50% transparansi) */}
-            <div className="absolute inset-0 bg-[#0da2e7]/50 pointer-events-none z-0" />
+              {/* Lapisan biru di atas background (~50% transparansi) */}
+              <div className="absolute inset-0 bg-[#0da2e7]/50 pointer-events-none z-0" />
 
-            <div className="relative z-10 max-w-md">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-[1.05] font-sans">
-                LET&apos;S CREATE SOMETHING GREAT TOGETHER.
-              </h3>
+              <div className="relative z-10 max-w-md">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black uppercase tracking-tight leading-[1.05] font-sans">
+                  LET&apos;S CREATE SOMETHING GREAT TOGETHER.
+                </h3>
+              </div>
+              
+              {/* Circular Arrow Button with hover physics */}
+              <a
+                href="#contact"
+                aria-label="Menuju formulir pesan"
+                className="relative z-10 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-white text-[#0da2e7] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 active:scale-95 transition-all duration-300"
+              >
+                <ArrowUpRight
+                  size={28}
+                  strokeWidth={2.2}
+                  className="sm:w-[34px] sm:h-[34px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
+                />
+              </a>
+
+              {/* Subtle background decoration with low opacity */}
+              <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
             </div>
-            
-            {/* Circular Arrow Button with hover physics */}
-            <a
-              href="#contact"
-              aria-label="Menuju formulir pesan"
-              className="relative z-10 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-white text-[#0da2e7] flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 active:scale-95 transition-all duration-300"
-            >
-              <ArrowUpRight
-                size={28}
-                strokeWidth={2.2}
-                className="sm:w-[34px] sm:h-[34px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
-              />
-            </a>
-
-            {/* Subtle background decoration with low opacity */}
-            <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-          </div>
+          </Reveal>
 
           {/* Sisi Kanan: ROBIN AI LAB // WORKSPACE - 5 cols */}
-          <div className="lg:col-span-5 flex flex-col justify-center">
+          <Reveal direction="up" distance={28} delay={0.2} className="lg:col-span-5 flex flex-col justify-center">
             <div className="relative w-full p-4 sm:p-6 bg-[#090d15] border border-[#151f2e] rounded-sm flex flex-col justify-between h-full">
               {/* Header card */}
               <div className="flex items-center justify-between pb-3 border-b border-[#151f2e] text-[10px] text-[#64748b]">
@@ -235,7 +238,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-          </div>
+          </Reveal>
 
         </div>
 
@@ -243,7 +246,7 @@ export default function Footer() {
         <div id="contact" className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch pt-2">
           
           {/* SISI KIRI: TESTIMONIALS (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <Reveal direction="up" distance={28} delay={0.1} className="lg:col-span-5 flex flex-col justify-between">
             <div>
               <span className="text-[#0da2e7] text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase block mb-1.5">
                 TESTIMONIALS
@@ -316,10 +319,10 @@ export default function Footer() {
                 </button>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* SISI KANAN: LET'S WORK TOGETHER / GET IN TOUCH WITH FORM (7 cols) */}
-          <div className="lg:col-span-7 lg:border-l lg:border-[#151f2e] lg:pl-10 flex flex-col justify-between">
+          <Reveal direction="up" distance={28} delay={0.2} className="lg:col-span-7 lg:border-l lg:border-[#151f2e] lg:pl-10 flex flex-col justify-between">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
               
               {/* Kolom Info Kontak */}
@@ -426,7 +429,7 @@ export default function Footer() {
               </div>
 
             </div>
-          </div>
+          </Reveal>
 
         </div>
 

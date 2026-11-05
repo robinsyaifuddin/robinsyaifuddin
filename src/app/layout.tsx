@@ -3,6 +3,7 @@ import "@/index.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTransition from "@/components/PageTransition";
+import { MusicProvider } from "@/components/MusicProvider";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 
@@ -35,14 +36,16 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-[#07090e] text-[#f1f5f9] antialiased selection:bg-[#0da2e7]/30 selection:text-white flex flex-col justify-between">
-        <main className="flex-1">
-          <PageTransition>
-            {children}
-          </PageTransition>
-        </main>
-        <Footer />
-        <Toaster />
-        <Sonner />
+        <MusicProvider>
+          <main className="flex-1">
+            <PageTransition>
+              {children}
+            </PageTransition>
+          </main>
+          <Footer />
+          <Toaster />
+          <Sonner />
+        </MusicProvider>
       </body>
     </html>
   );

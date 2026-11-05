@@ -7,6 +7,7 @@ import { Menu, X, Home, User, Briefcase, Mail, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MusicToggle } from "./MusicToggle";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,8 +108,9 @@ const Header = () => {
             })}
           </nav>
 
-          {/* CTA Button Desktop */}
-          <div className="hidden lg:block">
+          {/* CTA & Music Control Desktop */}
+          <div className="hidden lg:flex items-center space-x-3">
+            <MusicToggle showText={true} />
             <Link href="/contact">
               <Button 
                 variant="outline" 
@@ -121,20 +123,23 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="lg:hidden relative p-2 rounded-xl transition-all duration-300 hover:bg-primary/10 group" 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            <div className="relative z-10">
-              {isMenuOpen ? (
-                <X size={24} className="text-primary transition-all duration-300" />
-              ) : (
-                <Menu size={24} className="text-foreground transition-all duration-300 group-hover:text-primary" />
-              )}
-            </div>
-          </button>
+          {/* Mobile Right Controls (Music Toggle + Hamburger) */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <MusicToggle />
+            <button 
+              className="relative p-2 rounded-xl transition-all duration-300 hover:bg-primary/10 group" 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <div className="relative z-10">
+                {isMenuOpen ? (
+                  <X size={24} className="text-primary transition-all duration-300" />
+                ) : (
+                  <Menu size={24} className="text-foreground transition-all duration-300 group-hover:text-primary" />
+                )}
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}

@@ -40,6 +40,9 @@
     @apply bg-background text-foreground min-h-screen antialiased font-sans selection:bg-primary selection:text-white;
     background-color: #07090e;
   }
+  img {
+    content-visibility: auto;
+  }
 }
 
 /* Luxury Glass Morphism Effects */
