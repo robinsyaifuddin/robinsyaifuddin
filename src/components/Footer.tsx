@@ -207,35 +207,25 @@ export default function Footer() {
                 <span className="text-[#0da2e7] font-semibold tracking-widest text-[9px] sm:text-[10px]">ONLINE</span>
               </div>
 
-              {/* Inner screen mockup */}
-              <div className="my-3 sm:my-4 aspect-[16/9] bg-[#05080e] border border-[#162030] rounded flex flex-col justify-between p-3.5 sm:p-5 relative overflow-hidden group">
-                <div className="absolute -top-12 -right-12 w-32 h-32 bg-[#0da2e7]/20 blur-3xl pointer-events-none" />
-                <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#0da2e7] font-bold">
-                  AI-POWERED PRODUCT CRAFT
-                </div>
-                <div className="space-y-1 sm:space-y-1.5">
-                  <p className="font-display text-lg sm:text-2xl text-white tracking-tight leading-none">
-                    RAPID. FUNCTIONAL. SCALABLE.
-                  </p>
-                  <p className="text-[9px] sm:text-[11px] text-[#94a3b8] leading-tight">
-                    Vibe-Coded Web Apps • Autonomous Agent Workflows • High Conversion
-                  </p>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <span className="h-1.5 w-8 bg-[#0da2e7] rounded-full" />
-                  <span className="h-1.5 w-3 bg-[#1e293b] rounded-full" />
-                </div>
+              {/* Inner screen 3D Office Workspace */}
+              <div className="my-3 sm:my-4 aspect-[16/9] bg-[#05080e] border border-[#162030] rounded relative overflow-hidden group">
+                <iframe
+                  src="/digibooster_office_engine.html"
+                  title="Virtual 3D Office Workspace"
+                  className="w-full h-full border-0 pointer-events-auto"
+                  loading="lazy"
+                />
               </div>
 
               {/* Card Footer */}
               <div className="flex justify-between items-center text-[10px] sm:text-[11px] text-[#94a3b8] pt-1">
                 <span>Prompts, Logic &amp; Code</span>
-                <a
-                  href="#contact"
+                <Link
+                  href="/agents"
                   className="text-white hover:text-[#0da2e7] font-semibold flex items-center gap-1 transition-colors"
                 >
-                  Start Project →
-                </a>
+                  Visit →
+                </Link>
               </div>
             </div>
           </Reveal>
