@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev --turbo",
     "dev:webpack": "next dev",
+    "clean": "powershell -Command \"if (Test-Path .next) { Remove-Item -Recurse -Force .next }\"",
+    "prebuild": "npm run clean",
     "build": "next build",
+    "deploy:clean": "npm run clean && npm run build",
     "start": "next start",
     "lint": "next lint"
   },
