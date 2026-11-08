@@ -1,7 +1,7 @@
 "use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { User, GraduationCap, Award, Calendar, MapPin, ExternalLink } from "lucide-react";
+import { User, GraduationCap, Award, Calendar, MapPin, ExternalLink, Download } from "lucide-react";
 
 const About = () => {
   const educations = [
@@ -111,6 +111,16 @@ const About = () => {
               Penggiat Teknologi dan Pengembangan Diri dengan pengalaman luas dalam pengembangan digitalisasi dan organisasi. 
               Terbukti aktif dalam berbagai kegiatan, proyek kolaboratif, dan program magang yang mengasah kemampuan teknis serta interpersonal.
             </p>
+            <div className="mt-8 flex justify-center">
+              <a
+                href="/Robin_Syaifuddin_Resume.pdf"
+                download="Robin_Syaifuddin_Resume.pdf"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-black font-semibold text-sm sm:text-base hover:bg-primary/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,102,0,0.5)] active:scale-95"
+              >
+                <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>Unduh CV Resmi (PDF)</span>
+              </a>
+            </div>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-orange-400 rounded-full mx-auto mt-8" />
           </div>
 

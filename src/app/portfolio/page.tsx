@@ -16,10 +16,18 @@ import {
   Calendar, 
   MapPin,
   ChevronRight,
+  ChevronDown,
   Sparkles,
   Search,
-  Filter
+  Filter,
+  Check
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { PORTFOLIO_PROJECTS, ProjectItem } from "@/lib/portfolioData";
 import { TACTILE_TRANSITION, TACTILE_EASE, VIEWPORT_ONCE } from "@/lib/motion";
 
@@ -128,24 +136,51 @@ export default function PortfolioPage() {
           </div>
 
           {/* Filter Bar & Search */}
-          <div className="mt-8 pt-6 border-t border-[#131d2e]/70 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-2 sm:pb-0 scrollbar-none">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`text-[10px] sm:text-[11px] font-mono uppercase tracking-wider px-3 py-1.5 rounded-sm transition-all whitespace-nowrap ${
-                    selectedCategory === cat
-                      ? "bg-[#0da2e7] text-white font-bold shadow-md shadow-[#0da2e7]/20"
-                      : "bg-[#0d1422] text-[#94a3b8] hover:text-white border border-[#162238] hover:border-[#0da2e7]/40"
-                  }`}
+          <div className="mt-8 pt-6 border-t border-[#131d2e]/70 flex items-center gap-3 max-w-xl">
+            {/* Category Dropdown */}
+            <div className="shrink-0">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    type="button"
+                    className="flex items-center gap-2 px-3 py-1.5 bg-[#0d1422] hover:bg-[#131d2e] border border-[#162238] hover:border-[#0da2e7]/50 rounded-sm text-xs font-mono uppercase tracking-wider text-slate-200 transition-colors focus:outline-none focus:ring-1 focus:ring-[#0da2e7]"
+                    title="Pilih Kategori"
+                    aria-label="Pilih Kategori"
+                  >
+                    <Filter size={14} className="text-[#0da2e7] shrink-0" />
+                    <span className="hidden sm:inline">
+                      {selectedCategory}
+                    </span>
+                    <ChevronDown size={14} className="text-[#64748b] hidden sm:inline transition-transform duration-200" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent 
+                  align="start" 
+                  className="w-52 bg-[#0b121e] border border-[#162238] text-slate-200 shadow-xl rounded-sm p-1 z-50"
                 >
-                  {cat}
-                </button>
-              ))}
+                  {categories.map((cat) => {
+                    const isSelected = selectedCategory === cat;
+                    return (
+                      <DropdownMenuItem
+                        key={cat}
+                        onClick={() => setSelectedCategory(cat)}
+                        className={`flex items-center justify-between px-3 py-2 text-xs font-mono uppercase tracking-wider cursor-pointer rounded-xs transition-colors ${
+                          isSelected
+                            ? "bg-[#0da2e7]/15 text-[#0da2e7] font-semibold"
+                            : "hover:bg-[#131d2e] hover:text-white"
+                        }`}
+                      >
+                        <span>{cat}</span>
+                        {isSelected && <Check size={14} className="text-[#0da2e7]" />}
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
 
-            <div className="relative min-w-[220px]">
+            {/* Search Input */}
+            <div className="relative flex-1">
               <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#64748b]" />
               <input
                 type="text"

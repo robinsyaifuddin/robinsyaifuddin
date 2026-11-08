@@ -392,7 +392,8 @@ export default function Index() {
               {/* Action Button: Download Resume */}
               <div className="pt-1">
                 <a
-                  href="/about"
+                  href="/Robin_Syaifuddin_Resume.pdf"
+                  download="Robin_Syaifuddin_Resume.pdf"
                   className="w-full inline-flex items-center justify-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-2 sm:py-2.5 border border-[#1f2d42] hover:border-[#0da2e7] hover:bg-[#0da2e7]/10 text-white text-[9px] sm:text-[11px] font-semibold uppercase tracking-[0.12em] sm:tracking-[0.15em] transition-all duration-200 group active:scale-[0.98]"
                 >
                   <span>DOWNLOAD RESUME</span>
