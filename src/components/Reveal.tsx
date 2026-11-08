@@ -19,8 +19,8 @@ export default function Reveal({
   children,
   delay = 0,
   direction = "up",
-  distance = 28,
-  duration = 0.65,
+  distance = 18,
+  duration = 0.45,
   className = "",
   ...props
 }: RevealProps) {
@@ -63,6 +63,7 @@ export default function Reveal({
         delay,
         ease: TACTILE_EASE,
       }}
+      style={{ willChange: "opacity, transform" }}
       className={className}
       {...props}
     >

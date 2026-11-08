@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ROB'Space - Virtual 3D Office</title>
+<title>DigiBooster Indonesia - Virtual 3D Office</title>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -561,7 +561,7 @@ dialog#agentDlg::backdrop {
   transition:opacity 0.45s cubic-bezier(0.4,0,0.2,1);
   pointer-events:all;
 ">
-  <img src="/favicon.png" alt="ROB'Space" style="
+  <img src="/logo.webp" alt="DigiBooster" style="
     width:68px;height:68px;border-radius:14px;margin-bottom:18px;
     filter:drop-shadow(0 0 20px rgba(0,210,255,0.7));
     animation:veil-pulse 1.6s ease-in-out infinite;
@@ -590,7 +590,7 @@ dialog#agentDlg::backdrop {
 <!-- WATERMARK TOP-LEFT PERSIS GAMBAR (HANYA LOGO, TANPA TEKS) -->
 <div class="brand-watermark">
   <div class="logo-icon" style="background: transparent; box-shadow: none;">
-    <img src="favicon.png" alt="ROB'Space Logo" style="width: 44px; height: 44px; object-fit: contain; filter: drop-shadow(0 0 12px rgba(0,210,255,0.6));" />
+    <img src="logo.webp" alt="DigiBooster Logo" style="width: 44px; height: 44px; object-fit: contain; filter: drop-shadow(0 0 12px rgba(0,210,255,0.6));" />
   </div>
 </div>
 
@@ -618,8 +618,8 @@ dialog#agentDlg::backdrop {
       <option value="it_dev">📁 Systems Room (Raka Systems)</option>
       <option value="server">Ruang Server & Infrastruktur</option>
       <option value="eco_garden">Eco Garden & Pergola</option>
-      <option value="oasis_pool">🏊 Taman Oasis & Lap Pool ROB'Space</option>
-      <option value="cafeteria">☕ ROB'Space Cafeteria & Terrace Lounge</option>
+      <option value="oasis_pool">🏊 Taman Oasis & Lap Pool DigiBooster</option>
+      <option value="cafeteria">☕ Digi-Cafeteria & Terrace Lounge</option>
       <option value="solar_farm">☀️ Smart Solar Farm & BESS Hub</option>
       <option value="hardware_lab">🔬 Hardware Lab & Tech Warehouse</option>
       <option value="pantry">Pantry (Dining Area)</option>
@@ -677,14 +677,14 @@ dialog#agentDlg::backdrop {
         SEDANG MEMEGANG / ALAT AKTIF:
       </div>
       <div id="dlgHolding" style="font-weight:800;color:#f8fafc;display:flex;align-items:center;gap:6px">
-        Laptop ROB'Space (Code Matrix Engine)
+        Laptop DigiBooster (Code Matrix Engine)
       </div>
     </div>
 
     <div class="card">
       <div style="font-size:10.5px;color:var(--muted);margin-bottom:3px;font-weight:700">TUGAS & AKTIVITAS SAAT INI</div>
       <div id="dlgTask" style="font-weight:600;color:#e2e8f0;line-height:1.4">
-        Deploy fitur baru engine ROB'Space & pemeliharaan server real-time.
+        Deploy fitur baru engine DigiBooster & pemeliharaan server real-time.
       </div>
     </div>
 
@@ -868,7 +868,7 @@ logoImg.onload = () => {
     item.redraw();
   }
 };
-logoImg.src = "favicon.png";
+logoImg.src = "logo.webp";
 
 function makeCanvasTex(w, h, drawFn) {
   const cvs = document.createElement("canvas");
@@ -1729,7 +1729,7 @@ for (const bx of [-2.4, 4.9]) {
   createBox(uDriveway, 0.22, 0.15, 0.22, 0x00B9F1, bx, 0.88, 14.8, false);
 }
 
-// 3. PULAU TAMAN BUNDARAN DI DALAM 'U' (CENTRAL ISLAND DENGAN MONUMEN ROB'SPACE)
+// 3. PULAU TAMAN BUNDARAN DI DALAM 'U' (CENTRAL ISLAND DENGAN MONUMEN DIGIBOOSTER)
 const centralIsland = new THREE.Group();
 centralIsland.position.set(1.25, 0, 23.0);
 world.add(centralIsland);
@@ -1741,7 +1741,7 @@ createBox(centralIsland, 8.5, 0.18, 0.25, 0xdfe5ec, 0, 0.09, 3.4, false);
 createBox(centralIsland, 0.25, 0.18, 6.8, 0xdfe5ec, -4.12, 0.09, 0, false);
 createBox(centralIsland, 0.25, 0.18, 6.8, 0xdfe5ec, 4.12, 0.09, 0, false);
 
-// MONUMEN UTAMA ROB'SPACE DI TENGAH PULAU 'U'
+// MONUMEN UTAMA DIGIBOOSTER DI TENGAH PULAU 'U'
 const monuTex = makeCanvasTex(1024, 340, (ctx, w, h, img) => {
   ctx.fillStyle = "#0b1220"; ctx.fillRect(0, 0, w, h);
   ctx.strokeStyle = "#00d2ff"; ctx.lineWidth = 6; ctx.strokeRect(10, 10, w - 20, h - 20);
@@ -1750,9 +1750,9 @@ const monuTex = makeCanvasTex(1024, 340, (ctx, w, h, img) => {
   } else {
     ctx.fillStyle = "#00d2ff"; ctx.font = "bold 120px sans-serif"; ctx.fillText("⚡", 60, 205);
   }
-  ctx.fillStyle = "#ffffff"; ctx.font = "bold 92px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("ROB'Space", 225, 160);
-  ctx.fillStyle = "#38bdf8"; ctx.font = "700 52px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Headquarters", 230, 235);
-  ctx.fillStyle = "#94a3b8"; ctx.font = "600 36px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Innovate & Build", 230, 290);
+  ctx.fillStyle = "#ffffff"; ctx.font = "bold 92px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("DigiBooster", 225, 160);
+  ctx.fillStyle = "#38bdf8"; ctx.font = "700 52px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Indonesia", 230, 235);
+  ctx.fillStyle = "#94a3b8"; ctx.font = "600 36px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Skill Up, Stand Up", 230, 290);
 });
 createBox(centralIsland, 6.8, 2.4, 0.45, new THREE.MeshLambertMaterial({ map: monuTex }), 0, 1.4, 0.5);
 // Rimbun tanaman bunga hias di sekeliling monumen
@@ -1817,7 +1817,7 @@ function createStoneWallMat(repeatX, repeatY = 1.2) {
 
 const wallPlinthMat = getMat(0x1e293b); // Plinth fondasi bawah granit dark slate
 const wallCapMat = getMat(0x0f172a);    // Coping cap lis penutup atas matte charcoal
-const wallNeonMat = getMat(0x00B9F1);   // Aksen garis lis neon cyan ROB'Space
+const wallNeonMat = getMat(0x00B9F1);   // Aksen garis lis neon cyan DigiBooster
 
 function makeWallSegment(w, d, x, z, repeatLen) {
   // 1. Fondasi Bawah / Base Plinth (Tinggi 0.40m)
@@ -1825,7 +1825,7 @@ function makeWallSegment(w, d, x, z, repeatLen) {
   // 2. Dinding Utama Bertekstur Batu Alam Stacked Stone (Tinggi 2.06m)
   const stoneMat = createStoneWallMat(repeatLen, 1.2);
   createBox(perimeterWallGroup, w > d ? w : 0.30, 2.06, w > d ? 0.30 : d, stoneMat, x, 1.43, z);
-  // 3. Garis Lis Aksen Tipis Cyan ROB'Space di Bawah Coping
+  // 3. Garis Lis Aksen Tipis Cyan DigiBooster di Bawah Coping
   createBox(perimeterWallGroup, w > d ? w : 0.32, 0.04, w > d ? 0.32 : d, wallNeonMat, x, 2.45, z, false);
   // 4. Lis Top Coping Cap Atas Rata (Tinggi 0.12m)
   createBox(perimeterWallGroup, w > d ? w + 0.16 : 0.42, 0.12, w > d ? 0.42 : d + 0.16, wallCapMat, x, 2.54, z);
@@ -1881,7 +1881,7 @@ for (let x = -33.0; x <= -15.0; x += 6.0) {
   createBox(perimeterWallGroup, 0.48, 0.08, 0.48, 0x0f172a, x, 2.70, 25.0);
 }
 
-// Spanduk Branding ROB'Space & Plakat Korporat Terpasang di Dinding Pagar Depan:
+// Spanduk Branding DigiBooster & Plakat Korporat Terpasang di Dinding Pagar Depan:
 function makeBannerTex(title, subtitle, icon) {
   return makeCanvasTex(512, 160, (ctx, w, h, img) => {
     ctx.fillStyle = "#0284c7"; ctx.fillRect(0, 0, w, h);
@@ -1900,12 +1900,12 @@ function makeBannerTex(title, subtitle, icon) {
     }
   });
 }
-const bannerTex1 = makeBannerTex("ROB'Space", "Innovate & Build", "⚡");
+const bannerTex1 = makeBannerTex("DigiBooster", "Skill Up, Stand Up", "⚡");
 const bannerTexInovasi = makeBannerTex("Inovasi", "Teknologi Terdepan", "💡");
 const bannerTexDampak  = makeBannerTex("Dampak", "Pertumbuhan Nyata", "👥");
 const bannerTexDigital = makeBannerTex("Digital", "Ekosistem AI Cerdas", "☁️");
 
-// Papan Billboard Utama ROB'Space di Pagar Depan Kiri
+// Papan Billboard Utama DigiBooster di Pagar Depan Kiri
 createBox(perimeterWallGroup, 6.2, 1.4, 0.08, new THREE.MeshLambertMaterial({ map: bannerTex1 }), -18.5, 1.45, 25.18, false);
 
 // 3 Plakat Korporat di Dinding Pagar Depan Kanan (Samping Gerbang / Plakat Korporat)
@@ -1919,7 +1919,7 @@ addFenceBanner(18.0, 14.2, bannerTexDampak, 4.4);  // Plakat "Dampak"
 addFenceBanner(23.5, 14.2, bannerTexDigital, 4.4); // Plakat "Digital"
 
 // =====================================================================================
-// BILLBOARD BESAR ROB'SPACE DI PAGAR BELAKANG KANTOR (UTARA, Z = -29.0)
+// BILLBOARD BESAR DIGIBOOSTER DI PAGAR BELAKANG KANTOR (UTARA, Z = -29.0)
 // =====================================================================================
 (function() {
   // === Tekstur Canvas Billboard Utama (HD 2048x768) ===
@@ -1973,33 +1973,33 @@ addFenceBanner(23.5, 14.2, bannerTexDigital, 4.4); // Plakat "Digital"
       ctx.textAlign = 'left';
     }
 
-    // === TEKS UTAMA ROB'SPACE HEADQUARTERS ===
+    // === TEKS UTAMA DIGIBOOSTER INDONESIA ===
     const textX = logoX + logoSize + 60;
 
-    // Nama brand: "ROB'Space"
+    // Nama brand: "DigiBooster"
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 210px "Plus Jakarta Sans", Nunito, sans-serif';
     ctx.textBaseline = 'alphabetic';
-    ctx.fillText('ROB\'Space', textX, 300);
+    ctx.fillText('DigiBooster', textX, 300);
 
     // Nama brand: "Indonesia" (biru cyan)
     ctx.fillStyle = '#00d2ff';
     ctx.font = 'bold 130px "Plus Jakarta Sans", Nunito, sans-serif';
-    ctx.fillText('Headquarters', textX + 4, 440);
+    ctx.fillText('Indonesia', textX + 4, 440);
 
     // Garis pemisah tipis
     ctx.fillStyle = 'rgba(0,210,255,0.4)';
     ctx.fillRect(textX, 460, 900, 4);
 
-    // Tagline: "Skill Up, Stand Up with ROB'Space"
+    // Tagline: "Skill Up, Stand Up with DigiBooster"
     ctx.fillStyle = '#bae6fd';
     ctx.font = '700 72px "Plus Jakarta Sans", Nunito, sans-serif';
-    ctx.fillText('Autonomous AI & Creative Space', textX, 564);
+    ctx.fillText('Skill Up, Stand Up with DigiBooster', textX, 564);
 
     // URL website
     ctx.fillStyle = '#38bdf8';
     ctx.font = '700 54px "Plus Jakarta Sans", Nunito, sans-serif';
-    ctx.fillText('robspace.id', textX + 4, 655);
+    ctx.fillText('digiboosterindonesia.com', textX + 4, 655);
 
     // Titik-titik dekoratif (dot cyan)
     for (let i = 0; i < 7; i++) {
@@ -2174,7 +2174,7 @@ makeCar(parkArea, 0x18181b, bayXs[0], 19.0, 0); // Hitam Elegan
 makeCar(parkArea, 0xef4444, bayXs[1], 19.0, 0); // Merah Sport
 makeCar(parkArea, 0x2563eb, bayXs[2], 19.0, 0); // Biru Eksekutif
 makeCar(parkArea, 0xd1d5db, bayXs[3], 19.0, 0); // Silver Mewah
-makeCar(parkArea, 0x38bdf8, bayXs[4], 19.0, 0); // Cyan ROB'Space EV
+makeCar(parkArea, 0x38bdf8, bayXs[4], 19.0, 0); // Cyan DigiBooster EV
 makeCar(parkArea, 0x1e293b, bayXs[5], 19.0, 0); // Slate Navy
 
 // FUNGSI MEMBUAT SEPEDA MOTOR REALISTIS DENGAN KANOPI PARKIR
@@ -2281,7 +2281,7 @@ const ecoSignTex = makeCanvasTex(512, 180, (ctx, w, h) => {
   ctx.fillStyle = "#0f172a"; ctx.fillRect(0, 0, w, h);
   ctx.strokeStyle = "#22c55e"; ctx.lineWidth = 6; ctx.strokeRect(6, 6, w - 12, h - 12);
   ctx.fillStyle = "#22c55e"; ctx.font = "bold 44px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("🌿 ROB'Space Eco Garden", 30, 68);
+  ctx.fillText("🌿 DigiBooster Eco Garden", 30, 68);
   ctx.fillStyle = "#bae6fd"; ctx.font = "700 24px 'Plus Jakarta Sans', sans-serif";
   ctx.fillText("• Urban Hydroponics & Solar Oasis", 32, 115);
   ctx.fillStyle = "#10b981"; ctx.font = "700 18px 'Plus Jakarta Sans', sans-serif";
@@ -2409,7 +2409,7 @@ for (let lz = -3.2; lz <= 3.2; lz += 0.60) {
 }
 
 // 3. Furniture Santai: Sofa L-Shape Rotan Outdoor & Meja Kopi Kayu
-// Sofa Sudut L-Shape Mewah (Bantalan Krem Abu-abu Elegan + Aksen Cushion ROB'Space Cyan & Mustard)
+// Sofa Sudut L-Shape Mewah (Bantalan Krem Abu-abu Elegan + Aksen Cushion DigiBooster Cyan & Mustard)
 createBox(perg, 2.4, 0.35, 0.85, 0x1e293b, -0.6, 0.22, -2.2); // Rangka sofa utama
 createBox(perg, 2.3, 0.16, 0.80, 0xf1f5f9, -0.6, 0.44, -2.2); // Bantalan empuk duduk
 createBox(perg, 2.4, 0.40, 0.18, 0x1e293b, -0.6, 0.65, -2.6); // Sandaran belakang
@@ -2538,7 +2538,7 @@ const industrialMat = getMat(0x475569);
 const yellowStripeMat = getMat(0xeab308);
 
 // -------------------------------------------------------------
-// 1. ZONA SAMPING KIRI: TAMAN OASIS RESORT & LAP POOL ROB'SPACE (LENGKAP & STYLISH)
+// 1. ZONA SAMPING KIRI: TAMAN OASIS RESORT & LAP POOL DIGIBOOSTER (LENGKAP & STYLISH)
 // Terletak di X: -38.5 s/d -25.0 (lebar 13.5m), Z: -17.5 s/d 14.0 (panjang 31.5m)
 // -------------------------------------------------------------
 const poolZone = new THREE.Group();
@@ -2732,7 +2732,7 @@ const cafeGlassMat = new THREE.MeshPhysicalMaterial({
 createBox(cafeZone, 22.3, 2.4, 0.08, cafeGlassMat, -27.25, 1.35, 23.2, false); // Kaca depan panjang
 createBox(cafeZone, 0.08, 2.4, 6.2, cafeGlassMat, -16.0, 1.35, 20.0, false);   // Kaca kanan menghadap pos satpam
 
-// Atap Kanopi Memanjang Penuh Modern dengan Lis Glow Neon Cyan ROB'Space
+// Atap Kanopi Memanjang Penuh Modern dengan Lis Glow Neon Cyan DigiBooster
 createBox(cafeZone, 23.2, 0.25, 7.0, 0x0f172a, -27.25, 2.88, 20.0);
 createBox(cafeZone, 23.3, 0.06, 7.1, 0x00B9F1, -27.25, 2.92, 20.0, false); // Glow cyan fascia
 
@@ -2741,7 +2741,7 @@ const cafeSignTex = makeCanvasTex(1024, 128, (ctx, w, h) => {
   ctx.fillStyle = "#0f172a"; ctx.fillRect(0, 0, w, h);
   ctx.strokeStyle = "#00B9F1"; ctx.lineWidth = 6; ctx.strokeRect(6, 6, w - 12, h - 12);
   ctx.fillStyle = "#ffffff"; ctx.font = "bold 42px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("Γÿò ROB'SPACE CAFETERIA & ROASTERY", 40, 60);
+  ctx.fillText("Γÿò DIGI-CAFETERIA & SPECIALTY ROASTERY", 40, 60);
   ctx.fillStyle = "#38bdf8"; ctx.font = "600 24px 'Plus Jakarta Sans', sans-serif";
   ctx.fillText("Artisan Coffee ΓÇó Healthy Pastry ΓÇó Tech Co-Working Lounge", 42, 102);
 });
@@ -2831,7 +2831,7 @@ for (let pz = -5.0; pz <= 5.0; pz += 1.25) {
 for (let py = 0.5; py <= 2.1; py += 0.4) {
   createBox(partitionFence, 0.08, 0.05, 10.7, 0x334155, 0, py, 0);
 }
-// Lis Top Cap Pagar dengan Aksen Glow Cyan ROB'Space di Atas
+// Lis Top Cap Pagar dengan Aksen Glow Cyan DigiBooster di Atas
 createBox(partitionFence, 0.26, 0.08, 10.9, cornerFenceMat, 0, 2.24, 0);
 createBox(partitionFence, 0.12, 0.03, 10.8, cornerFenceBarMat, 0, 2.29, 0, false);
 
@@ -2880,7 +2880,7 @@ for (let i = 0; i < 6; i++) {
 
   // Bodi Kabinet Putih Industri Bersih Megapack
   createBox(cabinet, 2.7, 2.5, 3.8, 0xf8fafc, 0, 1.25, 0);
-  // Strip Status LED Bar Cyan ROB'Space di Depan
+  // Strip Status LED Bar Cyan DigiBooster di Depan
   createBox(cabinet, 2.5, 0.35, 0.10, 0x00B9F1, 0, 2.2, 1.92, false);
   // Panel Akses & Sakelar Darurat
   createBox(cabinet, 0.45, 0.85, 0.08, 0x1e293b, 0.9, 1.15, 1.92);
@@ -2909,7 +2909,7 @@ const solarMeterTex = makeCanvasTex(1024, 256, (ctx, w, h) => {
   ctx.fillStyle = "#a7f3d0"; ctx.font = "500 24px 'Plus Jakarta Sans', sans-serif";
   ctx.fillText("≡ƒî▒ Zero-Carbon Microgrid: 100% Self-Sustained & Online", 30, 172);
   ctx.fillStyle = "#facc15"; ctx.font = "bold 22px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("ΓÜí Clean Power on White Sand Base ΓÇó ROB'Space HQ", 30, 222);
+  ctx.fillText("ΓÜí Clean Power on White Sand Base ΓÇó DigiBooster HQ", 30, 222);
 });
 createBox(bessHub, 5.2, 1.8, 0.15, new THREE.MeshBasicMaterial({ map: solarMeterTex }), -1.5, 3.4, 2.2, false);
 createCyl(bessHub, 0.10, 0.10, 1.8, 0x1e293b, -3.8, 2.3, 2.2, 8);
@@ -3107,7 +3107,7 @@ const grandPaverTex = makeCanvasTex(512, 512, (ctx, w, h) => {
     for (let y = 0; y < h; y += pSize) {
       ctx.fillStyle = ((x / pSize + y / pSize) % 2 === 0) ? "#ffffff" : "#f0fdf4";
       ctx.fillRect(x + 4, y + 4, pSize - 8, pSize - 8);
-      // Inlaid border tipis cyan khas ROB'Space
+      // Inlaid border tipis cyan khas DigiBooster
       ctx.strokeStyle = "rgba(0, 185, 241, 0.4)";
       ctx.lineWidth = 2;
       ctx.strokeRect(x + 10, y + 10, pSize - 20, pSize - 20);
@@ -3218,7 +3218,7 @@ buildWall(officeGroup, -10.5, -10.6, -3.0, -10.6, "glass");  // DEPAN RAPAT BESA
 buildWall(officeGroup, -3.0, -10.6, 30.0, -10.6, "glass");   // DEPAN MEGA SPORTS & WELLNESS HUB: KACA PANORAMA MEWAH KE JALAN
 
 // 2. DINDING BELAKANG BARIS TENGAH (Z = -8.2, Menghadap ke Jalan Sepetak Belakang):
-// Seluruh baris tengah menggunakan dinding solid kokoh & backdrop premium seperti Lobby ROB'Space
+// Seluruh baris tengah menggunakan dinding solid kokoh & backdrop premium seperti Lobby DigiBooster
 buildWall(officeGroup, -24, -8.2, -17.0, -8.2, "solid");    // BELAKANG FINANCE & HR: SOLID WALL ELEGAN
 buildWall(officeGroup, -17.0, -8.2, -9.5, -8.2, "solid");    // BELAKANG LAYANAN KLIEN: SOLID WALL ELEGAN
 buildWall(officeGroup, -9.5, -8.2, -2.0, -8.2, "solid");     // Dinding Logo Belakang Lobby
@@ -3464,10 +3464,10 @@ const ceoRobinBackTex = makeCanvasTex(512, 240, (ctx, w, h) => {
   ctx.fillStyle = "#070c18"; ctx.fillRect(0, 0, w, h);
   ctx.strokeStyle = "#f59e0b"; ctx.lineWidth = 5; ctx.strokeRect(6, 6, w - 12, h - 12);
   
-  // Header Mahkota & ROB'Space Indonesia
+  // Header Mahkota & DigiBooster Indonesia
   ctx.fillStyle = "#f59e0b"; ctx.font = "bold 44px sans-serif"; ctx.fillText("👑", 28, 72);
   ctx.fillStyle = "#ffffff"; ctx.font = "bold 32px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("ROB'SPACE HEADQUARTERS", 90, 62);
+  ctx.fillText("DIGIBOOSTER INDONESIA", 90, 62);
   ctx.fillStyle = "#00d2ff"; ctx.font = "700 18px 'Plus Jakarta Sans', sans-serif";
   ctx.fillText("EXECUTIVE HEADQUARTERS • OFFICE OF THE CEO", 92, 90);
 
@@ -3508,7 +3508,7 @@ createBox(officeGroup, 1.45, 0.42, 0.05, 0x0f172a, -13.2, 1.35, -14.7); // Monit
 const ceoMonitorTex = makeCanvasTex(512, 180, (ctx, w, h) => {
   ctx.fillStyle = "#050b14"; ctx.fillRect(0, 0, w, h);
   ctx.fillStyle = "#00d2ff"; ctx.font = "bold 20px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("⚡ ROB'SPACE CEO COMMAND TERMINAL", 20, 36);
+  ctx.fillText("⚡ DIGIBOOSTER CEO COMMAND TERMINAL", 20, 36);
   ctx.fillStyle = "#10b981"; ctx.font = "600 14px sans-serif";
   ctx.fillText("● SYSTEM ONLINE • AGENTS: 100% OPERATIONAL • REVENUE: +340%", 20, 68);
   ctx.fillStyle = "#f59e0b"; ctx.fillRect(20, 85, 470, 4);
@@ -3522,7 +3522,7 @@ const ceoMonitorTex = makeCanvasTex(512, 180, (ctx, w, h) => {
 // Layar monitor menghadap ke utara (-Z arah kursi Bang Robin)
 createBox(officeGroup, 1.41, 0.38, 0.02, new THREE.MeshBasicMaterial({ map: ceoMonitorTex }), -13.2, 1.35, -14.73, false);
 
-// Laptop Eksekutif MacBook Pro Space Gray & Cangkir Kopi ROB'Space di Meja
+// Laptop Eksekutif MacBook Pro Space Gray & Cangkir Kopi DigiBooster di Meja
 createBox(officeGroup, 0.38, 0.02, 0.26, 0x475569, -14.2, 1.03, -15.0); // MacBook
 const mbScreen = createBox(officeGroup, 0.38, 0.24, 0.02, 0x0f172a, -14.2, 1.15, -14.88);
 mbScreen.rotation.x = 0.22;
@@ -3541,7 +3541,7 @@ const ceoNotesTex = makeCanvasTex(512, 380, (ctx, w, h) => {
   ctx.fillStyle = "#78350f"; ctx.font = "bold 26px 'Plus Jakarta Sans', sans-serif";
   ctx.fillText("📌 BANG ROBIN'S STRATEGIC NOTES", 25, 45);
   ctx.fillStyle = "#92400e"; ctx.font = "600 15px sans-serif";
-  ctx.fillText("Target ROB'Space 2026 - Autonomous AI Transformation", 25, 75);
+  ctx.fillText("Target DigiBooster Indonesia 2026 - Autonomous AI Transformation", 25, 75);
 
   // Sticky Note 1 (Cyan): Roadmap
   ctx.fillStyle = "#bae6fd"; ctx.fillRect(25, 100, 210, 115);
@@ -3606,7 +3606,7 @@ ceoCredenza.position.set(-18.2, 0, -15.0);
 // Membujur utara-selatan sepanjang dinding sekat barat
 createBox(ceoCredenza, 0.48, 1.4, 1.8, 0x111827, 0, 0.70, 0); // Bodi kredenza hitam elegan nempel tembok barat
 createBox(ceoCredenza, 0.52, 0.06, 1.84, V_OAK, 0, 1.43, 0);   // Top table kayu oak solid
-// Trofi Emas ROB'Space & Sertifikasi di atas kredenza
+// Trofi Emas DigiBooster & Sertifikasi di atas kredenza
 createCyl(ceoCredenza, 0.08, 0.12, 0.08, 0x0f172a, 0, 1.50, -0.5);
 createCyl(ceoCredenza, 0.03, 0.03, 0.18, 0xf59e0b, 0, 1.62, -0.5);
 createBox(ceoCredenza, 0.18, 0.18, 0.18, 0xf59e0b, 0, 1.78, -0.5); // Golden Cube Award
@@ -3704,7 +3704,7 @@ const smartBoardTex = makeCanvasTex(512, 280, (ctx, w, h) => {
 
   // Header Bar
   ctx.fillStyle = "#0ea5e9"; ctx.font = "bold 24px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("⚡ ROB'SPACE STRATEGIC ALIGNMENT", 24, 42);
+  ctx.fillText("⚡ DIGIBOOSTER STRATEGIC ALIGNMENT", 24, 42);
   ctx.fillStyle = "#94a3b8"; ctx.font = "14px sans-serif";
   ctx.fillText("Q4 Autonomous AI Scalability & Multi-Agent Ops", 26, 68);
 
@@ -3843,7 +3843,7 @@ const welcomeMatTex = makeCanvasTex(256, 128, (ctx, w, h) => {
   ctx.fillStyle = "#ffffff"; ctx.font = "bold 20px 'Plus Jakarta Sans', sans-serif";
   ctx.fillText("SPORTS & WELLNESS", 22, 50);
   ctx.fillStyle = "#38bdf8"; ctx.font = "600 14px sans-serif";
-  ctx.fillText("ROB'SPACE HUB", 50, 85);
+  ctx.fillText("DIGIBOOSTER HUB", 50, 85);
 });
 createBox(officeGroup, 2.0, 0.02, 1.2, new THREE.MeshLambertMaterial({ map: welcomeMatTex }), 13.0, 0.045, -11.5, false);
 
@@ -4062,7 +4062,7 @@ const tvKaraokeTex = makeCanvasTex(512, 280, (ctx, w, h) => {
   ctx.fillStyle = "#09090b"; ctx.fillRect(0, 0, w, h);
   ctx.strokeStyle = "#ec4899"; ctx.lineWidth = 6; ctx.strokeRect(6, 6, w - 12, h - 12);
   ctx.fillStyle = "#f43f5e"; ctx.font = "bold 32px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("🎤 ROB'SPACE KARAOKE & JAMMING", 25, 65);
+  ctx.fillText("🎤 DIGIBOOSTER KARAOKE & JAMMING", 25, 65);
   ctx.fillStyle = "#fcd34d"; ctx.font = "700 24px 'Plus Jakarta Sans', sans-serif";
   ctx.fillText("♪ Bohemian Rhapsody - Queen", 25, 115);
   ctx.fillStyle = "#38bdf8"; ctx.font = "600 18px sans-serif";
@@ -4437,7 +4437,7 @@ makeVoxelPlant(officeGroup, -10.2, -1.6, 1.15, "green");
 
 
 // 11. LOBBY CENTRAL: ULTRA-COMFORT EXECUTIVE WELCOME LOUNGE (X: -9.5 s/d -2.0, Z: -8.2 s/d -0.8)
-// A. BACKDROP BRANDING ROB'SPACE HEADQUARTERS (Dinding Belakang Z = -8.0)
+// A. BACKDROP BRANDING DIGIBOOSTER INDONESIA (Dinding Belakang Z = -8.0)
 const lobbyBackTex = makeCanvasTex(512, 180, (ctx, w, h, img) => {
   ctx.fillStyle = "#0c1527"; ctx.fillRect(0, 0, w, h);
   if (img) {
@@ -4445,7 +4445,7 @@ const lobbyBackTex = makeCanvasTex(512, 180, (ctx, w, h, img) => {
   } else {
     ctx.fillStyle = "#00d2ff"; ctx.font = "bold 60px sans-serif"; ctx.fillText("⚡", 35, 95);
   }
-  ctx.fillStyle = "#ffffff"; ctx.font = "bold 44px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("ROB'Space", 115, 80);
+  ctx.fillStyle = "#ffffff"; ctx.font = "bold 44px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("DigiBooster", 115, 80);
   ctx.fillStyle = "#38bdf8"; ctx.font = "700 24px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Indonesia", 117, 120);
   ctx.fillStyle = "#10b981"; ctx.font = "600 18px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Executive Welcome Lounge • Skill Up, Stand Up", 117, 150);
 });
@@ -4505,7 +4505,7 @@ createBox(officeGroup, 0.55, 0.02, 0.35, 0x78350f, -6.3, 0.44, -4.5);
 createBox(officeGroup, 0.26, 0.015, 0.32, 0x0284c7, -6.35, 0.455, -4.5);
 // Majalah 2 (AI Forbes Business - Emas)
 createBox(officeGroup, 0.24, 0.015, 0.30, 0xf59e0b, -6.28, 0.47, -4.48);
-// Brosur Selamat Datang ROB'Space
+// Brosur Selamat Datang DigiBooster
 createBox(officeGroup, 0.18, 0.01, 0.26, 0xffffff, -6.24, 0.485, -4.52);
 
 // 3. SET MINUMAN TIK & MOCKTAIL / WELCOME DRINK
@@ -4514,12 +4514,12 @@ createCyl(officeGroup, 0.04, 0.05, 0.16, 0xbde0fe, -5.2, 0.52, -4.5, 8); // Boto
 createCyl(officeGroup, 0.03, 0.028, 0.08, 0xffffff, -5.02, 0.48, -4.54, 8); // Cangkir teh putih
 createCyl(officeGroup, 0.03, 0.028, 0.08, 0xffffff, -5.02, 0.48, -4.44, 8); // Cangkir teh kedua
 
-// E. 2 STAND BANNER ELEGAN ROB'SPACE (ROLL-UP BANNER)
+// E. 2 STAND BANNER ELEGAN DIGIBOOSTER (ROLL-UP BANNER)
 // Stand Banner 1: AI Multi-Agent & Autonomous Ecosystem (Di Sisi Timur Dekat Koridor Z = -2.8, X = -2.5)
 const banner1Tex = makeCanvasTex(256, 512, (ctx, w, h) => {
   ctx.fillStyle = "#070d18"; ctx.fillRect(0, 0, w, h);
   ctx.strokeStyle = "#00d2ff"; ctx.lineWidth = 6; ctx.strokeRect(4, 4, w - 8, h - 8);
-  ctx.fillStyle = "#00d2ff"; ctx.font = "bold 32px sans-serif"; ctx.fillText("⚡ ROB'SPACE", 20, 60);
+  ctx.fillStyle = "#00d2ff"; ctx.font = "bold 32px sans-serif"; ctx.fillText("⚡ DIGIBOOSTER", 20, 60);
   ctx.fillStyle = "#ffffff"; ctx.font = "bold 20px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("AI MULTI-AGENT", 22, 100);
   ctx.fillStyle = "#38bdf8"; ctx.font = "600 14px sans-serif"; ctx.fillText("Autonomous Enterprise 2026", 24, 130);
   ctx.strokeStyle = "#00d2ff"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(20, 150); ctx.lineTo(w - 20, 150); ctx.stroke();
@@ -4546,7 +4546,7 @@ const banner2Tex = makeCanvasTex(256, 512, (ctx, w, h) => {
   ctx.strokeStyle = "#f59e0b"; ctx.lineWidth = 6; ctx.strokeRect(4, 4, w - 8, h - 8);
   ctx.fillStyle = "#f59e0b"; ctx.font = "bold 28px sans-serif"; ctx.fillText("🚀 SKILL UP", 20, 60);
   ctx.fillStyle = "#ffffff"; ctx.font = "bold 28px sans-serif"; ctx.fillText("STAND UP!", 20, 95);
-  ctx.fillStyle = "#10b981"; ctx.font = "600 14px sans-serif"; ctx.fillText("ROB'Space Studio & Innovation", 22, 130);
+  ctx.fillStyle = "#10b981"; ctx.font = "600 14px sans-serif"; ctx.fillText("DigiBooster Academy & Studio", 22, 130);
   ctx.strokeStyle = "#f59e0b"; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(20, 150); ctx.lineTo(w - 20, 150); ctx.stroke();
 
   const services = ["✔ AI Workforce Training", "✔ High-Impact Coaching", "✔ Modern Tech Incubation", "✔ Scalable B2B AI Model"];
@@ -4782,7 +4782,7 @@ const videoEditTex = makeCanvasTex(360, 160, (ctx, w, h) => {
   // Header bar
   ctx.fillStyle = "#1f2937"; ctx.fillRect(0, 0, w, 24);
   ctx.fillStyle = "#f43f5e"; ctx.font = "bold 11px sans-serif"; ctx.fillText("● REC", 10, 16);
-  ctx.fillStyle = "#ffffff"; ctx.font = "bold 11px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Timeline: Reel_ROBSpace_Viral_v4.mp4 (4K 60fps)", 55, 16);
+  ctx.fillStyle = "#ffffff"; ctx.font = "bold 11px 'Plus Jakarta Sans', sans-serif"; ctx.fillText("Timeline: Reel_DigiBooster_Viral_v4.mp4 (4K 60fps)", 55, 16);
   // Video preview box di kiri
   ctx.fillStyle = "#030712"; ctx.fillRect(10, 32, 130, 75);
   ctx.fillStyle = "#00d2ff"; ctx.font = "bold 14px sans-serif"; ctx.fillText("▶ PREVIEW", 35, 75);
@@ -4813,7 +4813,7 @@ const vertPhoneTex = makeCanvasTex(128, 240, (ctx, w, h) => {
   // Video mock visual
   ctx.fillStyle = "#1e1b4b"; ctx.fillRect(8, 38, w - 16, 140);
   ctx.fillStyle = "#fb7185"; ctx.font = "bold 12px sans-serif"; ctx.fillText("#FYP TREND", 20, 95);
-  ctx.fillStyle = "#38bdf8"; ctx.font = "10px sans-serif"; ctx.fillText("@robspace.id", 20, 115);
+  ctx.fillStyle = "#38bdf8"; ctx.font = "10px sans-serif"; ctx.fillText("@digibooster.id", 20, 115);
   // Right side social action buttons (Heart, Comment, Share)
   ctx.fillStyle = "#ef4444"; ctx.fillText("❤ 284K", 82, 115);
   ctx.fillStyle = "#ffffff"; ctx.fillText("💬 3.4K", 82, 135);
@@ -4866,7 +4866,7 @@ const mktMetricsTex = makeCanvasTex(512, 280, (ctx, w, h) => {
 
   // Title
   ctx.fillStyle = "#f43f5e"; ctx.font = "bold 20px 'Plus Jakarta Sans', sans-serif";
-  ctx.fillText("📊 ROB'SPACE SOCIAL KPI DASHBOARD", 20, 36);
+  ctx.fillText("📊 DIGIBOOSTER SOCIAL KPI DASHBOARD", 20, 36);
   ctx.fillStyle = "#a855f7"; ctx.font = "600 12px monospace";
   ctx.fillText("LIVE SYNC: TIKTOK ADS • META SUITE • YOUTUBE STUDIO", 20, 56);
 
@@ -4891,7 +4891,7 @@ const mktMetricsTex = makeCanvasTex(512, 280, (ctx, w, h) => {
   // Trending Hashtags Bar
   ctx.fillStyle = "#ffffff"; ctx.font = "bold 12px sans-serif"; ctx.fillText("🔥 Trending Hashtag Reach (Millions):", 20, 164);
   const tags = [
-    { name: "#ROBSpace", val: 82, col: "#ec4899" },
+    { name: "#DigiBooster", val: 82, col: "#ec4899" },
     { name: "#ViralMarketing", val: 65, col: "#a855f7" },
     { name: "#AIAutomation", val: 95, col: "#06b6d4" },
     { name: "#ContentCreator", val: 54, col: "#f59e0b" },
@@ -5658,7 +5658,7 @@ function updatePrayerClockWIB() {
   // Running Info Jadwal Sholat
   prayerClockCtx.fillStyle = "#facc15"; // Kuning emas
   prayerClockCtx.font = "bold 16px 'Plus Jakarta Sans', sans-serif";
-  prayerClockCtx.fillText("ROB'SPACE MUSHOLA", 128, 98);
+  prayerClockCtx.fillText("DIGIBOOSTER MUSHOLA", 128, 98);
   prayerClockCtx.fillStyle = "#a7f3d0";
   prayerClockCtx.font = "bold 13px monospace";
   prayerClockCtx.fillText("DZUHUR 11:48 • ASHAR 15:02", 128, 118);
@@ -5899,7 +5899,7 @@ const ROOM_MAP = {
   karaoke_music: { x: 25.3,  y: WALL_H + 0.35, z: -13.5, name: "Karaoke & Music Studio Lounge" },
   finance_hr:    { x: -20.5, y: WALL_H + 0.35, z: -3.8,  name: "Strategy Room (Arga CSO)", hero: true },
   manajemen:     { x: -13.2, y: WALL_H + 0.35, z: -3.8,  name: "Operations Room (Reta COO)", hero: true },
-  lobby:         { x: -5.7,  y: WALL_H + 0.35, z: -3.8,  name: "ROB'Space (Lobby)", hero: true },
+  lobby:         { x: -5.7,  y: WALL_H + 0.35, z: -3.8,  name: "DigiBooster Indonesia (Lobby)", hero: true },
   koridor_utama: { x: 1.25,  y: WALL_H + 0.35, z: -3.8,  name: "Koridor Utama (Grand Avenue)", hero: true },
   gerbang_utama: { x: 1.25,  y: WALL_H + 0.35, z: 14.0,  name: "Pintu Gerbang Masuk Depan (2 Pintu)", hero: true },
   koridor_depan: { x: -7.0,  y: WALL_H + 0.35, z: 0.4,   name: "Jalan Sepetak Fasilitas" },
@@ -6016,13 +6016,13 @@ const AGENTS = [
   {
     id: "robin",
     name: "Bang Robin",
-    role: "Chief Executive Officer ROB'Space",
+    role: "Chief Executive Officer DigiBooster",
     gender: "male",
     iconSvg: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>`,
     badge: "FOUNDER & CEO • EXECUTIVE ROOM",
     image: "/assets/agents/kevin.jpg",
     holding: "CEO Golden Hologram Seal & Strategic Slate",
-    holdingDesc: "Meninjau roadmap kemitraan strategis & memantau ekosistem autonomous AI ROB'Space.",
+    holdingDesc: "Meninjau roadmap kemitraan strategis & memantau ekosistem autonomous AI DigiBooster.",
     room: "ceo_robin",
     bubble: "Meninjau kepemimpinan & performa dewan 5 agen AI",
     pos: { x: -13.2, y: 0.0, z: -16.0 },
@@ -6049,7 +6049,7 @@ function buildVoxelAgent(agent) {
   grp.position.set(agent.pos.x, agent.pos.y, agent.pos.z);
   grp.rotation.y = agent.rotY || 0;
 
-  // Warna Palet Voxel Brand ROB'Space
+  // Warna Palet Voxel Brand DigiBooster
   const C_JACKET = 0x181c24; // Matte dark charcoal black
   const C_CYAN   = 0x00d2ff; // Neon cyan electric blue
   const C_WHITE  = 0xf8fafc; // Clean white inner shirt & details
@@ -6083,7 +6083,7 @@ function buildVoxelAgent(agent) {
   // 3. PINGGANG & SABUK
   addVoxelBox(grp, agent, 0.42, 0.12, 0.24, C_JACKET, 0, 0.77, 0);
 
-  // 4. TORSO & SERAGAM IDENTIK ROB'SPACE
+  // 4. TORSO & SERAGAM IDENTIK DIGIBOOSTER
   // Kaos dalam putih (terlihat di dada tengah & kerah)
   addVoxelBox(grp, agent, 0.20, 0.46, 0.22, C_WHITE, 0, 1.04, 0.01);
 
@@ -6096,7 +6096,7 @@ function buildVoxelAgent(agent) {
   // Kerah jaket
   addVoxelBox(grp, agent, 0.38, 0.06, 0.22, C_JACKET, 0, 1.28, 0);
 
-  // Striping bahu cyan ROB'Space (Kiri & Kanan)
+  // Striping bahu cyan DigiBooster (Kiri & Kanan)
   addVoxelBox(grp, agent, 0.13, 0.03, 0.235, C_CYAN, -0.15, 1.26, 0);
   addVoxelBox(grp, agent, 0.13, 0.03, 0.235, C_CYAN, 0.15, 1.26, 0);
 
@@ -6104,10 +6104,10 @@ function buildVoxelAgent(agent) {
   addVoxelBox(grp, agent, 0.11, 0.03, 0.13, C_CYAN, -0.27, 1.14, 0);
   addVoxelBox(grp, agent, 0.11, 0.03, 0.13, C_CYAN, 0.27, 1.14, 0);
 
-  // Logo ROB'Space cyan di dada kiri
+  // Logo DigiBooster cyan di dada kiri
   addVoxelBox(grp, agent, 0.05, 0.05, 0.01, C_CYAN, 0.12, 1.15, 0.12);
 
-  // Lanyard biru & ID Badge ROB'Space
+  // Lanyard biru & ID Badge DigiBooster
   addVoxelBox(grp, agent, 0.06, 0.22, 0.01, C_LANYARD, 0, 1.14, 0.122);
   addVoxelBox(grp, agent, 0.06, 0.09, 0.012, C_DARK, 0, 1.00, 0.13);
   addVoxelBox(grp, agent, 0.03, 0.03, 0.013, C_CYAN, 0, 1.00, 0.136);
@@ -6144,7 +6144,7 @@ function buildVoxelAgent(agent) {
     addVoxelBox(grp, agent, 0.02, 0.02, 0.14, C_DARK, 0.16, 1.46, 0.08);
     addVoxelBox(grp, agent, 0.03, 0.03, 0.03, C_CYAN, 0.12, 1.46, 0.15);
 
-    // LENGAN & ITEM: LAPTOP ROB'SPACE (PERSIS FOTO)
+    // LENGAN & ITEM: LAPTOP DIGIBOOSTER (PERSIS FOTO)
     // Tangan kanan santai di saku kargo
     addVoxelBox(grp, agent, 0.11, 0.32, 0.12, C_JACKET, 0.26, 1.05, 0);
     addVoxelBox(grp, agent, 0.09, 0.12, 0.10, C_SKIN, 0.24, 0.85, 0.03);

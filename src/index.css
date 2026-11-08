@@ -40,6 +40,11 @@
     @apply bg-background text-foreground min-h-screen antialiased font-sans selection:bg-primary selection:text-white;
     background-color: #07090e;
   }
+  /* Optimasi rendering hardware acceleration */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
   img {
     content-visibility: auto;
   }

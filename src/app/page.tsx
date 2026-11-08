@@ -251,6 +251,7 @@ export default function Index() {
               src="/profil-icon.png"
               alt="Robin Syaifuddin"
               fetchPriority="high"
+              loading="eager"
               decoding="async"
               className="w-full h-auto max-h-[50vh] sm:max-h-[60vh] md:max-h-[70vh] lg:max-h-[78vh] object-contain object-bottom filter drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)]"
             />
