@@ -187,7 +187,7 @@ export default function Index() {
           
           {/* Giant PORTFOLIO Backdrop Text */}
           <div
-            className="absolute inset-x-0 top-10 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center pointer-events-none select-none z-0"
+            className="absolute inset-x-0 top-12 xs:top-14 sm:top-16 md:top-1/2 md:-translate-y-1/2 flex items-center justify-center pointer-events-none select-none z-0"
           >
             <span className="font-display font-black uppercase tracking-[-0.03em] text-[27vw] sm:text-[23vw] md:text-[22vw] lg:text-[20vw] leading-none scale-y-105 bg-gradient-to-b from-[#0ea5e9] via-[#0369a1] to-[#07090e] bg-clip-text text-transparent opacity-95 drop-shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
               PORTFOLIO
